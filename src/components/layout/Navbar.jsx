@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-white shadow">
       <Link to="/" className="text-xl font-bold text-[#0066CC]">
-        TrueCare
+        TrueCare fghdfgfgfgh
       </Link>
       <div className="flex gap-6">
         <NavLink to="/" className={linkClass}>
