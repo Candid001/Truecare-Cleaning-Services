@@ -6,6 +6,7 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Services from "../pages/Services";
 import ServiceArea from "../pages/ServiceArea";
+import Footer from "../components/layout/Footer";
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
