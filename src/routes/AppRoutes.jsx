@@ -12,7 +12,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="p-6">
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />

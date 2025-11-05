@@ -19,7 +19,7 @@ function Navbar() {
       : "text-gray-700 hover:text-[#0066CC]";
 
   return (
-    <nav className="bg-white shadow pl-10 pr-5 py-4 relative md:px-10 md:py-6 lg:px-[120px] w-screen">
+    <nav className="bg-white shadow pl-10 pr-5 py-4 relative md:px-10 md:py-6 lg:px-[120px] w-screen lg:w-full z-50 lg:h-[88px] lg:py-3">
       <div className="flex justify-between items-center">
         <Link to="/">
           <img src={Logo} alt="" />
@@ -62,7 +62,7 @@ function Navbar() {
 
           {/* Mobile Screen List */}
           {isOpen && (
-            <div className="absolute top-[87px] left-0 w-full bg-white flex flex-col p-6  rounded-b-4xl">
+            <div className="absolute top-18 left-0 w-full bg-white flex flex-col p-6  rounded-b-4xl md:z-50">
               <NavLink
                 to="/"
                 className={mobileLinkClass}
@@ -106,7 +106,7 @@ function Navbar() {
           )}
           {/* Button */}
           <div>
-            <Button text="Request a Quote" />
+            <Button text="Request a Quote" className="bg-[#0066CC] text-white text-sm px-5 py-3 rounded-[60px] font-medium focus:outline-none w-fit hidden md:flex "/>
           </div>
         </div>
 
