@@ -44,7 +44,7 @@ const Hero = () => {
       <img
         src={Image}
         alt="Image"
-        className="absolute w-[340px] h-[249px] rounded-2xl md:hidden top-130 z-50"
+        className="absolute w-[340px] h-[249px] rounded-2xl md:hidden top-130 z-50 object-cover self-center"
       />
 
       {/* Desktop image */}
