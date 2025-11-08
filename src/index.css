@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+    --color-btn-primary: #0066CC;
+    --color-nav-default: #2B2F32;
+    --color-blue-100: #C4DCF5;
+    --color-shadow: #EAEAEA33;
+    --color-text-nav-desc: #565E64;
+}
+
 body {
     font-family: "Instrument Sans", sans-serif;
 }

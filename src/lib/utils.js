@@ -1,0 +1,1 @@
+export const navHoverClass = "hover:border-b-2 hover:border-btn-primary"
