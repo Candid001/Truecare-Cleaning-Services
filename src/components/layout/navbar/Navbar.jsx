@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useRef, useEffect} from "react";
 import {Link, NavLink} from "react-router-dom";
 import Button from "../../ui/Button.jsx";
 //TODO: Use icon like this, check line 23
@@ -9,10 +9,32 @@ import NavbarLink from "./NavbarLink.jsx";
 import NavDrop from "./NavDrop.jsx";
 
 function Navbar() {
+    // Dropdown-related code
+    const dropdownRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
-
     const [isServicesHover, setIsServicesHover] = useState(false);
+
+    const handleDropdownClick = () => {
+        setShowDropdown(!showDropdown);
+        setIsServicesHover(false);
+    }
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShowDropdown(false);
+            }
+        }
+
+        if (showDropdown) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showDropdown]);
 
     const mobileLinkClass = ({isActive}) =>
         isActive
@@ -20,7 +42,7 @@ function Navbar() {
             : "text-gray-700 hover:text-btn-primary";
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white py-2 shadow-xs border-b border-blue-100">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white py-4 shadow-xs border-b border-blue-100">
             <div className="flex justify-between items-center w-[90%] mx-auto">
                 <Link to="/">
                     <Logo/>
@@ -42,16 +64,19 @@ function Navbar() {
                     ))}
 
                     <div
+                        ref={dropdownRef}
                         className={`flex relative items-center gap-x-2 cursor-pointer`}
                         onMouseEnter={() => setIsServicesHover(true)}
                         onMouseLeave={() => setIsServicesHover(false)}
-                        onClick={() => setShowDropdown(!showDropdown)}
+                        onClick={handleDropdownClick}
                     >
                         <span>Our Services</span>
                         <ChevronDown className="h-6 w-6"/>
 
                         {/*Hover Effect*/}
-                        {isServicesHover && !showDropdown && <div className={`absolute w-full -bottom-2 h-[2px] bg-btn-primary`}></div>}
+                        {(!showDropdown && isServicesHover) &&
+                            <div className={`absolute w-full -bottom-2 h-[2px] bg-btn-primary`}></div>}
+                        {/*Dropdown*/}
                         {showDropdown && <NavDrop/>}
                     </div>
 
@@ -123,13 +148,14 @@ function Navbar() {
                             </NavLink>
                         </div>
                     )}
-                    {/* Button */}
-                    <div>
-                        <Button text="Request a Quote"
-                                className="bg-[#0066CC] text-white text-sm px-5 py-3 rounded-[60px] font-medium focus:outline-none w-fit hidden md:flex "/>
-                    </div>
                 </div>
 
+                {/* Button */}
+                <div>
+                    <Button
+                        text="Request a Quote"
+                    />
+                </div>
             </div>
         </nav>
     );

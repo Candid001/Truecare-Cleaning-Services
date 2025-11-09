@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import {navHoverClass} from "@/lib/utils.js";
+import {navHoverClass} from "@/lib/utils.jsx";
 
 function NavbarLink({name, to}) {
 
