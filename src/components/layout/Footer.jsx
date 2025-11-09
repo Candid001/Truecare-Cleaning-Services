@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "../../assets/TrueCare Cleaning Services full logo.svg";
+import Logo from "../../assets/truecare-logo.svg";
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="bg-[#003D7A] px-5 pt-10 flex flex-col gap-12 h-fit w-auto md:pt-20 md:px-10 lg:px-[120px] lg:pt-[120px]">
+    <div className="bg-[#003D7A] px-5 pt-10 flex flex-col gap-12 h-fit w-auto md:pt-20 md:px-10 lg:px-[120px] lg:pt-[120px] font-instrument">
       {/* First Div  */}
       <div className="flex flex-col gap-12 md:gap-16 lg:flex lg:flex-row lg:gap-[141px]">
         <div className="flex flex-col gap-6 lg:w-[407px]">

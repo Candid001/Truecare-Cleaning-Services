@@ -1,23 +1,23 @@
 import React from "react";
-import Ficon from "../../assets/Frame.svg";
+import Ficon from "../../assets/frame.svg";
 import Button from "../ui/Button";
-import Image from "../../assets/Frame 106.svg";
-import Image1 from "../../assets/Frame 106 (1).svg";
+import Image from "../../assets/frame106.svg";
+import Image1 from "../../assets/frame1061.svg";
 
 const Hero = () => {
   return (
-    <div className="relative bg-[#0066CC] w-full min-h-[700px] flex flex-col pt-10 text-center text-white px-5 md:px-10 lg:px-20 mb-20 z-40 md:h-[800px]">
+    <div className="relative bg-[#0066CC] w-full min-h-[700px] flex flex-col pt-10 text-center text-white px-5 md:px-10 lg:px-20 mb-20 z-40 md:h-[800px] font-instrument">
       {/* Top message */}
       <div className="flex justify-center items-center gap-2 mt-10 md:mt-16">
         <img src={Ficon} alt="icon" className="w-5 h-5" />
-        <p className="text-sm md:text-base">
+        <p className="text-sm md:text-base ">
           Fully insured & bonded for your peace of mind.
         </p>
       </div>
 
       {/* Main content */}
       <div className="flex flex-col items-center justify-center gap-8 max-w-[700px] mt-8 lg:ml-[270px] lg:w-[626px]">
-        <h1 className="font-semibold text-3xl md:text-[57px] leading-tight tracking-tight lg:text-[61px] ">
+        <h1 className="font-semibold text-3xl md:text-[57px] leading-tight tracking-tight lg:text-[61px]">
           Every Space Deserves the TrueCare Touch
         </h1>
 

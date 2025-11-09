@@ -1,17 +1,17 @@
 import React from "react";
-import Apartments from "../../assets/Apartments.svg";
-import Offices from "../../assets/Offices.svg";
-import Clinics from "../../assets/Clinics.svg";
-import Property from "../../assets/Property.svg";
-import Projects from "../../assets/Projects.svg";
+import Apartments from "../../assets/apartments.svg";
+import Offices from "../../assets/offices.svg";
+import Clinics from "../../assets/clinics.svg";
+import Property from "../../assets/property.svg";
+import Projects from "../../assets/projects.svg";
 import { BsArrowRight } from "react-icons/bs";
 
 const WhatWeOffer = () => {
   return (
-    <div className="w-full h-fit px-5 py-10 md:py-15 md:px-10 lg:p-[120px]">
+    <div className="w-full h-fit px-5 py-10 md:py-15 md:px-10 lg:p-[120px] font-instrument">
       <div className="flex flex-col gap-14 md:gap-[72px]">
         <div className="flex flex-col gap-2 text-center md:gap-3">
-          <h3 className="font-medium text-sm text-[#0066CC] bg-[#E6F2FF] p-1 rounded-sm w-fit self-center">
+          <h3 className="font-medium text-sm text-btn-primary bg-[#E6F2FF] p-1 rounded-sm w-fit self-center">
             What We Offer
           </h3>
           <div className="flex flex-col gap-6 md:w-[600px] self-center">

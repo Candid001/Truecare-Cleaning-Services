@@ -5,7 +5,7 @@ import CardImg3 from "../../assets/Frame 9 (2).svg";
 
 const WhoWeAre = () => {
   return (
-    <div className="w-full h-fit px-5 py-10 lg:px-[120px]">
+    <div className="w-full h-fit px-5 py-10 lg:px-[120px] font-instrument">
       <div className="flex flex-col gap-12 text-center md:gap-[72px]">
         <div className="w-full flex flex-col gap-2">
           <h3 className="bg-[#F0F7FF] p-1 w-fit rounded-sm font-medium text-sm text-[#0066CC] self-center">
