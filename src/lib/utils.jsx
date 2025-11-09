@@ -34,3 +34,22 @@ export const DropDownItems = [
         desc: "Cleanup that makes new builds move-in."
     }
 ]
+
+export const navItems = [
+    {
+        name: "Home",
+        to: "/"
+    },
+    {
+        name: "About Us",
+        to: "/about"
+    },
+    {
+        name: "Service Area",
+        to: "/service-area"
+    },
+    {
+        name: "Contact Us",
+        to: "/contact-us"
+    }
+]
