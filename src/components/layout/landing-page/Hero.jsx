@@ -6,7 +6,7 @@ import Image1 from "@assets/frame1061.svg";
 
 const Hero = () => {
   return (
-    <div className="relative bg-[#0066CC] w-full min-h-[700px] flex flex-col pt-10 text-center text-white px-5 md:px-10 lg:px-20 mb-20 z-40 md:h-[800px] font-instrument">
+    <div className="relative bg-btn-primary w-full min-h-[700px] flex flex-col pt-10 text-center text-white px-5 md:px-10 lg:px-20 mb-20 z-40 md:h-[800px] font-instrument">
       {/* Top message */}
       <div className="flex justify-center items-center gap-2 mt-10 md:mt-16">
         <img src={Ficon} alt="icon" className="w-5 h-5" />

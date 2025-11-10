@@ -1,6 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {navItems} from "@/lib/utils.jsx";
 import FooterLogo from "@assets/full-logo-white.svg?component"
 import Facebook from "@assets/facebook.svg?component"
 import Instagram from "@assets/instagram.svg?component"
@@ -61,7 +59,7 @@ const Footer = () => {
                 <div className={`w-[90%] mx-auto flex flex-col gap-5 lg:flex-row lg:justify-between justify-center items-center text-center`}>
                     <p>© 2025 TrueCare Cleaning Services. All Rights Reserved.</p>
                     <p>
-                        Designed with care by <a href={`/`}>Olatunji </a>& Developed by <a href={`https://github.com/Muhtoyyib`}>Dev Toyyib</a> .
+                        Designed with care by <a href={`/`}  className={`text-btn-sec underline`}>Olatunji </a>& Developed by <a href={`https://github.com/Muhtoyyib`} className={`text-btn-sec underline`}>Dev Toyyib</a> .
                     </p>
                 </div>
             </div>
