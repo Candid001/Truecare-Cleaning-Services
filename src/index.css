@@ -7,6 +7,9 @@
     --color-blue-100: #C4DCF5;
     --color-shadow: #EAEAEA33;
     --color-text-nav-desc: #565E64;
+    --color-muted-blue: #F5FAFF;
+    --color-deep-blue: #003D7A;
+    --color-blue-sec: #3184D6;
 }
 
 body {
