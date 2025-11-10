@@ -1,12 +1,19 @@
 import {Building2, Hospital, Hotel, HouseIcon, School} from "lucide-react";
-import ServiceHomeApartments1 from "@assets/home-and-apartments-1.svg"
-import ServiceHomeApartments2 from "@assets/home-and-apartments-2.svg"
-import ServiceHomeApartments3 from "@assets/home-and-apartments-3.svg"
-import ServiceHomeApartments4 from "@assets/home-and-apartments-4.svg"
+
 import OfficeAndSMB1 from "@assets/office-and-smb-1.svg"
 import OfficeAndSMB2 from "@assets/office-and-smb-2.svg"
 import OfficeAndSMB3 from "@assets/office-and-smb-3.svg"
 import OfficeAndSMB4 from "@assets/office-and-smb-4.svg"
+
+import ServiceHomeApartments1 from "@assets/home-and-apartments-1.svg"
+import ServiceHomeApartments2 from "@assets/home-and-apartments-2.svg"
+import ServiceHomeApartments3 from "@assets/home-and-apartments-3.svg"
+import ServiceHomeApartments4 from "@assets/home-and-apartments-4.svg"
+
+import ClinicsAndWellnessCenter1 from "@assets/clinic-and-wellness-center-1.svg"
+import ClinicsAndWellnessCenter2 from "@assets/clinic-and-wellness-center-2.svg"
+import ClinicsAndWellnessCenter3 from "@assets/clinic-and-wellness-center-3.svg"
+import ClinicsAndWellnessCenter4 from "@assets/clinic-and-wellness-center-4.svg"
 
 export const navHoverClass = "hover:border-b-2 hover:border-btn-primary"
 
@@ -64,7 +71,8 @@ export const navItems = [
 
 export const servicesImages = {
     homeAndApartments: [ServiceHomeApartments1, ServiceHomeApartments2, ServiceHomeApartments3, ServiceHomeApartments4],
-    officeAndSMB: [OfficeAndSMB1, OfficeAndSMB2, OfficeAndSMB3, OfficeAndSMB4]
+    officeAndSMB: [OfficeAndSMB1, OfficeAndSMB2, OfficeAndSMB3, OfficeAndSMB4],
+    clinicsAndWellnessCenter: [ClinicsAndWellnessCenter1, ClinicsAndWellnessCenter2, ClinicsAndWellnessCenter3, ClinicsAndWellnessCenter4],
 }
 
 export const servicesIncluded = {
@@ -92,6 +100,15 @@ export const servicesIncluded = {
         "Wall and baseboard dusting",
         "Window and glass cleaning",
         "Debris removal and final touches"
+    ],
+    clinicsAndWellnessCenter: [
+        "Move-in & move-out deep cleaning",
+        "Appliance and fixture cleaning",
+        "Floor vacuuming and mopping",
+        "Bathroom and kitchen sanitization",
+        "Wall and baseboard dusting",
+        "Window and glass cleaning",
+        "Debris removal and final touches"
     ]
 }
 
@@ -111,6 +128,13 @@ export const serviceWhyChooseUS = {
         "Satisfaction guaranteed every single time"
     ],
     propertyRealtors: [
+        "Fast turnaround perfect for tight move-out schedules",
+        "Professional team experienced with rental properties",
+        "Detail-oriented cleaning that helps listings stand out",
+        "Reliable service trusted by property managers across Saskatchewan",
+        "Fully insured, bonded, and satisfaction guaranteed"
+    ],
+    clinicsAndWellnessCenter: [
         "Fast turnaround perfect for tight move-out schedules",
         "Professional team experienced with rental properties",
         "Detail-oriented cleaning that helps listings stand out",
@@ -157,5 +181,10 @@ export const serviceCta = {
         cta: "Reliable Turnover Cleaning Partner",
         heading: "Let’s Keep Your Properties Market-Ready",
         desc: "Partner with TrueCare for fast, detailed cleaning that keeps your listings spotless and your tenants happy — every time, right on schedule."
+    },
+    clinicsAndWellnessCenter: {
+        cta: "Your Hygiene, Our Priority",
+        heading: "Let’s Keep Your Clinic Safe and Spotless",
+        desc: "Partner with TrueCare for consistent, professional cleaning that supports health, safety, and comfort giving your patients the clean care experience they deserve"
     }
 }
