@@ -83,6 +83,15 @@ export const servicesIncluded = {
         "Restroom sanitation and supply restock",
         "Trash collection and recycling",
         "Kitchen and break area cleaning"
+    ],
+    propertyRealtors: [
+        "Move-in & move-out deep cleaning",
+        "Appliance and fixture cleaning",
+        "Floor vacuuming and mopping",
+        "Bathroom and kitchen sanitization",
+        "Wall and baseboard dusting",
+        "Window and glass cleaning",
+        "Debris removal and final touches"
     ]
 }
 
@@ -100,6 +109,13 @@ export const serviceWhyChooseUS = {
         "Eco-friendly and safe cleaning products",
         "Customized plans for all business sizes",
         "Satisfaction guaranteed every single time"
+    ],
+    propertyRealtors: [
+        "Fast turnaround perfect for tight move-out schedules",
+        "Professional team experienced with rental properties",
+        "Detail-oriented cleaning that helps listings stand out",
+        "Reliable service trusted by property managers across Saskatchewan",
+        "Fully insured, bonded, and satisfaction guaranteed"
     ]
 }
 
@@ -136,5 +152,10 @@ export const serviceCta = {
         cta: "Ready for a Cleaner Home?",
         heading: "Book Your TrueCare Cleaning Today",
         desc: "Reclaim your weekends and relax — our professional home cleaning team is ready to bring true care and freshness right to your doorstep."
+    },
+    propertyRealtors: {
+        cta: "Reliable Turnover Cleaning Partner",
+        heading: "Let’s Keep Your Properties Market-Ready",
+        desc: "Partner with TrueCare for fast, detailed cleaning that keeps your listings spotless and your tenants happy — every time, right on schedule."
     }
 }

@@ -24,11 +24,11 @@ function PMAndRealtors() {
                  times and leave a lasting impression on clients and prospective tenants.`
                 }
                 images={servicesImages.officeAndSMB}
-                services={servicesIncluded.officeAndSMB}
-                why={serviceWhyChooseUS.officeAndSMB}
+                services={servicesIncluded.propertyRealtors}
+                why={serviceWhyChooseUS.propertyRealtors}
             />
             <OtherCleaningServices/>
-            <ServiceCTA {...serviceCta.homeAndApartments}/>
+            <ServiceCTA {...serviceCta.propertyRealtors}/>
         </>
 
     )

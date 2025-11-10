@@ -4,7 +4,7 @@ import Button from "@components/ui/Button.jsx";
 
 function ServiceCTA({cta, heading, desc}) {
     return(
-        <div className={`py-20 md:w-4/5 mx-auto px-5 md:px-0`}>
+        <div className={`py-20 md:w-[90%] lg:w-4/5 mx-auto px-5 md:px-0`}>
             <div
                 className={`w-full rounded-lg py-10 relative overflow-hidden`}
                 style={{
