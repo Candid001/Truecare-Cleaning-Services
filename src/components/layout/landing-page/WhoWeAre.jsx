@@ -1,7 +1,7 @@
 import React from "react";
-import CardImg1 from "../../assets/Frame 9.svg";
-import CardImg2 from "../../assets/Frame 9 (1).svg";
-import CardImg3 from "../../assets/Frame 9 (2).svg";
+import CardImg1 from "@assets/frame9.svg";
+import CardImg2 from "@assets/frame91.svg";
+import CardImg3 from "@assets/frame92.svg";
 
 const WhoWeAre = () => {
   return (

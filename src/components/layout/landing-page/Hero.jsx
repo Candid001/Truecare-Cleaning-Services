@@ -1,8 +1,8 @@
 import React from "react";
-import Ficon from "../../assets/frame.svg";
-import Button from "../ui/Button";
-import Image from "../../assets/frame106.svg";
-import Image1 from "../../assets/frame1061.svg";
+import Ficon from "@assets/frame.svg";
+import Button from "../../ui/Button";
+import Image from "@assets/frame106.svg";
+import Image1 from "@assets/frame1061.svg";
 
 const Hero = () => {
   return (
