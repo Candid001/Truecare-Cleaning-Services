@@ -3,6 +3,10 @@ import ServiceHomeApartments1 from "@assets/home-and-apartments-1.svg"
 import ServiceHomeApartments2 from "@assets/home-and-apartments-2.svg"
 import ServiceHomeApartments3 from "@assets/home-and-apartments-3.svg"
 import ServiceHomeApartments4 from "@assets/home-and-apartments-4.svg"
+import OfficeAndSMB1 from "@assets/office-and-smb-1.svg"
+import OfficeAndSMB2 from "@assets/office-and-smb-2.svg"
+import OfficeAndSMB3 from "@assets/office-and-smb-3.svg"
+import OfficeAndSMB4 from "@assets/office-and-smb-4.svg"
 
 export const navHoverClass = "hover:border-b-2 hover:border-btn-primary"
 
@@ -14,7 +18,7 @@ export const DropDownItems = [
         desc: "Customized regular and deep cleans for comfort."
     },
     {
-        link: "/offices-and-small-businesses-cleaning",
+        link: "/office-and-small-business-cleaning",
         icon: <Building2 className="h-4 w-4"/>,
         name: "Offices & Small Businesses",
         desc: "Cleaning for a professional workspace."
@@ -59,7 +63,8 @@ export const navItems = [
 ]
 
 export const servicesImages = {
-    homeAndApartments: [ServiceHomeApartments1, ServiceHomeApartments2, ServiceHomeApartments3, ServiceHomeApartments4]
+    homeAndApartments: [ServiceHomeApartments1, ServiceHomeApartments2, ServiceHomeApartments3, ServiceHomeApartments4],
+    officeAndSMB: [OfficeAndSMB1, OfficeAndSMB2, OfficeAndSMB3, OfficeAndSMB4]
 }
 
 export const servicesIncluded = {
@@ -70,6 +75,14 @@ export const servicesIncluded = {
         "Bathroom sanitization and deodorizing",
         "Window and mirror polishing",
         "Optional deep cleaning or add-on requests",
+    ],
+    officeAndSMB: [
+        "Daily or weekly cleaning schedules",
+        "Dusting desks, fixtures, and electronics",
+        "Floor mopping and carpet vacuuming",
+        "Restroom sanitation and supply restock",
+        "Trash collection and recycling",
+        "Kitchen and break area cleaning"
     ]
 }
 
@@ -80,6 +93,13 @@ export const serviceWhyChooseUS = {
         "Flexible scheduling that fits your routine",
         "Affordable, transparent pricing",
         "Satisfaction guaranteed every visit"
+    ],
+    officeAndSMB: [
+        "Flexible after-hours service to fit your workday",
+        "Professional, background-checked cleaning team",
+        "Eco-friendly and safe cleaning products",
+        "Customized plans for all business sizes",
+        "Satisfaction guaranteed every single time"
     ]
 }
 
