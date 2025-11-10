@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
   return (
     <div className="px-4 md:px-10 lg:px-20 py-10 flex flex-col gap-10">
       <div
-        className="relative bg-cover bg-center w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] rounded-2xl transition-all duration-500 ease-in-out"
+        className="relative bg-cover bg-center w-full h-[400px] md:h-[400px] lg:h-[500px] rounded-2xl transition-all duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${isAfter ? OfficeAfter : OfficeBefore})`,
         }}
