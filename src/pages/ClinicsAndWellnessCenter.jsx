@@ -19,7 +19,7 @@ function ClinicsAndWellnessCenter() {
                 maxWD={'lg:max-w-[55%] md:max-w-[70%]'}
             />
             <ServicesOverview
-                desc={`our clients trust you with their health trust us with your space. At TrueCare 
+                desc={`Our clients trust you with their health trust us with your space. At TrueCare 
                        Cleaning Services, we specialize in cleaning medical and wellness environments 
                        that require the highest levels of care and sanitation. From daily disinfection 
                        to deep cleaning treatments, we help you maintain a safe, welcoming atmosphere for

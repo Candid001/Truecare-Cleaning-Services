@@ -85,6 +85,7 @@ function Navbar() {
                             setIsServicesHover={setIsServicesHover}
                             isServicesHover={isServicesHover}
                             handleDropdownClick={handleDropdownClick}
+                            closeMobileNav={handleIsOpen}
                         />
 
                         {navItems.slice(2).map((item, index) => (

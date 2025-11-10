@@ -43,7 +43,7 @@ export const DropDownItems = [
         desc: "Cleaning for a healthcare and wellness."
     },
     {
-        link: "/post-construction-projects-cleaning",
+        link: "/post-construction-cleaning",
         icon: <Hotel className="h-4 w-4"/>,
         name: "Post-Construction Projects",
         desc: "Cleanup that makes new builds move-in."
@@ -109,6 +109,15 @@ export const servicesIncluded = {
         "Wall and baseboard dusting",
         "Window and glass cleaning",
         "Debris removal and final touches"
+    ],
+    constructionCleaning: [
+        "Dust removal from walls, ceilings, and fixtures",
+        "Floor vacuuming, mopping, and polishing",
+        "Window and glass cleaning (inside & out)",
+        "Cabinet, countertop, and appliance wipe-down",
+        "Paint, adhesive, and debris removal",
+        "Bathroom and kitchen deep cleaning",
+        "Final inspection to ensure spotless delivery"
     ]
 }
 
@@ -140,6 +149,13 @@ export const serviceWhyChooseUS = {
         "Detail-oriented cleaning that helps listings stand out",
         "Reliable service trusted by property managers across Saskatchewan",
         "Fully insured, bonded, and satisfaction guaranteed"
+    ],
+    constructionCleaning: [
+        "Trained team experienced with post-construction cleaning",
+        "Professional-grade tools for dust and debris removal",
+        "Eco-friendly products safe for new finishes and materials",
+        "Flexible scheduling to meet project deadlines",
+        "Fully insured, bonded, and satisfaction guaranteed"
     ]
 }
 
@@ -167,7 +183,7 @@ export const services = [
     {
         name: "Post-Construction Cleaning",
         desc: "From dust to debris, we make new builds move-in ready with precision and care.",
-        link: "/post-construction-projects-cleaning"
+        link: "/post-construction-cleaning"
     },
 ]
 
@@ -186,5 +202,10 @@ export const serviceCta = {
         cta: "Your Hygiene, Our Priority",
         heading: "Let’s Keep Your Clinic Safe and Spotless",
         desc: "Partner with TrueCare for consistent, professional cleaning that supports health, safety, and comfort giving your patients the clean care experience they deserve"
+    },
+    constructionCleaning: {
+        cta: "Ready for the Final Touch?",
+        heading: "Let’s Make Your Project Move-In Ready",
+        desc: "We bring your new space to life with spotless results. Fast, detailed, and reliable post-construction cleaning across Saskatchewan done right the first time."
     }
 }

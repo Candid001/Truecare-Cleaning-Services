@@ -1,7 +1,7 @@
 import {ChevronDown} from "lucide-react";
 import NavDrop from "@/components/layout/navbar/NavDrop.jsx";
 
-function NavDropdown({ dropdownRef, showDropdown, setIsServicesHover, isServicesHover, handleDropdownClick}) {
+function NavDropdown({ dropdownRef, showDropdown, setIsServicesHover, isServicesHover, handleDropdownClick, closeMobileNav}) {
     return(
         <div
             ref={dropdownRef}
@@ -17,7 +17,7 @@ function NavDropdown({ dropdownRef, showDropdown, setIsServicesHover, isServices
             {(!showDropdown && isServicesHover) &&
                 <div className={`absolute w-full -bottom-2 h-[2px] bg-btn-primary`}></div>}
             {/*Dropdown*/}
-            {showDropdown && <NavDrop/>}
+            {showDropdown && <NavDrop onclick={closeMobileNav}/>}
         </div>
     )
 }
