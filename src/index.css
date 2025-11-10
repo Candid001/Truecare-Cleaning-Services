@@ -1,1 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --color-btn-primary: #0066CC;
+    --color-nav-default: #2B2F32;
+    --color-blue-100: #C4DCF5;
+    --color-shadow: #EAEAEA33;
+    --color-text-nav-desc: #565E64;
+    --color-muted-blue: #F5FAFF;
+    --color-deep-blue: #003D7A;
+    --color-blue-sec: #3184D6;
+}
+
+body {
+    font-family: "Instrument Sans", sans-serif;
+}
