@@ -1,34 +1,38 @@
 import {Building2, Hospital, Hotel, HouseIcon, School} from "lucide-react";
+import ServiceHomeApartments1 from "@assets/home-and-apartments-1.svg"
+import ServiceHomeApartments2 from "@assets/home-and-apartments-2.svg"
+import ServiceHomeApartments3 from "@assets/home-and-apartments-3.svg"
+import ServiceHomeApartments4 from "@assets/home-and-apartments-4.svg"
 
 export const navHoverClass = "hover:border-b-2 hover:border-btn-primary"
 
 export const DropDownItems = [
     {
-        link: "/",
+        link: "/home-and-apartments-cleaning",
         icon: <HouseIcon className="h-4 w-4"/>,
         name: "Home & Apartments",
         desc: "Customized regular and deep cleans for comfort."
     },
     {
-        link: "/offices-and-small-businesses",
+        link: "/offices-and-small-businesses-cleaning",
         icon: <Building2 className="h-4 w-4"/>,
         name: "Offices & Small Businesses",
         desc: "Cleaning for a professional workspace."
     },
     {
-        link: "/property-managers-and-realtors",
+        link: "/property-realtors-cleaning",
         icon: <School className="h-4 w-4"/>,
         name: "Property Managers & Realtors",
         desc: "Cleaning for a rental and sale-ready."
     },
     {
-        link: "/clinics-and-wellness-centers",
+        link: "/clinics-and-wellness-centers-cleaning",
         icon: <Hospital className="h-4 w-4"/>,
         name: "Clinics & Wellness Centers",
         desc: "Cleaning for a healthcare and wellness."
     },
     {
-        link: "/post-construction-projects",
+        link: "/post-construction-projects-cleaning",
         icon: <Hotel className="h-4 w-4"/>,
         name: "Post-Construction Projects",
         desc: "Cleanup that makes new builds move-in."
@@ -53,3 +57,64 @@ export const navItems = [
         to: "/contact-us"
     }
 ]
+
+export const servicesImages = {
+    homeAndApartments: [ServiceHomeApartments1, ServiceHomeApartments2, ServiceHomeApartments3, ServiceHomeApartments4]
+}
+
+export const servicesIncluded = {
+    homeAndApartments: [
+        "General dusting and surface wipe-downs",
+        "Vacuuming and mopping of all floors",
+        "Kitchen cleaning and appliance care",
+        "Bathroom sanitization and deodorizing",
+        "Window and mirror polishing",
+        "Optional deep cleaning or add-on requests",
+    ]
+}
+
+export const serviceWhyChooseUS = {
+    homeAndApartments: [
+        "Reliable and background-checked cleaners",
+        "Eco-friendly products safe for family and pets",
+        "Flexible scheduling that fits your routine",
+        "Affordable, transparent pricing",
+        "Satisfaction guaranteed every visit"
+    ]
+}
+
+export const services = [
+    {
+        name: "Home & Apartments Cleaning",
+        desc: "Enjoy a spotless home with regular or deep cleaning tailored to your comfort and lifestyle.",
+        link: "/home-and-apartments-cleaning"
+    },
+    {
+        name: "Office & Small Business Cleaning",
+        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        link: "/office-and-small-business-cleaning"
+    },
+    {
+        name: "Property Realtors Cleaning",
+        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        link: "/property-realtors-cleaning"
+    },
+    {
+        name: "Clinic & Wellness Center Cleaning",
+        desc: "Maintain a sanitary, professional environment with cleaning designed for health and wellness spaces.",
+        link: "/clinics-and-wellness-centers-cleaning"
+    },
+    {
+        name: "Post-Construction Cleaning",
+        desc: "From dust to debris, we make new builds move-in ready with precision and care.",
+        link: "/post-construction-projects-cleaning"
+    },
+]
+
+export const serviceCta = {
+    homeAndApartments: {
+        cta: "Ready for a Cleaner Home?",
+        heading: "Book Your TrueCare Cleaning Today",
+        desc: "Reclaim your weekends and relax — our professional home cleaning team is ready to bring true care and freshness right to your doorstep."
+    }
+}

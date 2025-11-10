@@ -1,6 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {navItems} from "@/lib/utils.jsx";
 import FooterLogo from "@assets/full-logo-white.svg?component"
 import Facebook from "@assets/facebook.svg?component"
 import Instagram from "@assets/instagram.svg?component"
