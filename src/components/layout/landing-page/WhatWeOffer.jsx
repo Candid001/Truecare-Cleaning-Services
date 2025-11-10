@@ -1,9 +1,9 @@
 import React from "react";
-import Apartments from "../../assets/apartments.svg";
-import Offices from "../../assets/offices.svg";
-import Clinics from "../../assets/clinics.svg";
-import Property from "../../assets/property.svg";
-import Projects from "../../assets/projects.svg";
+import Apartments from "@assets/apartments.svg";
+import Offices from "@assets/offices.svg";
+import Clinics from "@assets/clinics.svg";
+import Property from "@assets/property.svg";
+import Projects from "@assets/projects.svg";
 import { BsArrowRight } from "react-icons/bs";
 
 const WhatWeOffer = () => {
