@@ -60,8 +60,8 @@ export const navItems = [
         to: "/about"
     },
     {
-        name: "Service Area",
-        to: "/service-area"
+        name: "Request a Quote",
+        to: "/request-a-quote"
     },
     {
         name: "Contact Us",
@@ -207,5 +207,10 @@ export const serviceCta = {
         cta: "Ready for the Final Touch?",
         heading: "Let’s Make Your Project Move-In Ready",
         desc: "We bring your new space to life with spotless results. Fast, detailed, and reliable post-construction cleaning across Saskatchewan done right the first time."
+    },
+    requestAQuote: {
+        cta: "Prefer to Talk?",
+        heading: "Call or Message Us Anytime",
+        desc: "Need a faster response? Reach our friendly support team directly we’re always happy to help you schedule or customize your cleaning plan.",
     }
 }

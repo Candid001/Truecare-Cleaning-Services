@@ -10,7 +10,8 @@ function ServicesCard({heading, desc, link}) {
             </div>
 
             <div className={`flex gap-2 items-center absolute bottom-7 left-10`}>
-                <Link to={link} className={`text-btn-primary font-medium`}>Learn More</Link>
+                <a href={link} className={`text-btn-primary font-medium`}>Learn More</a>
+                {/*<Link to={link} className={`text-btn-primary font-medium`}>Learn More</Link>*/}
                 <ChevronRight className={`h-4 w-4`}/>
             </div>
         </div>

@@ -1,8 +1,9 @@
+import {serviceCta} from "@lib/utils.jsx";
+
+import Map from "@components/layout/about-us/Map.jsx"
+import ServiceCTA from "@components/layout/services/ServiceCTA.jsx";
 import ServicesHero from "@components/layout/services/ServicesHero.jsx";
 import AboutUSContent from "@components/layout/about-us/AboutUSContent.jsx";
-import ServiceCTA from "@components/layout/services/ServiceCTA.jsx";
-import {serviceCta} from "@lib/utils.jsx";
-import Map from "@components/layout/about-us/Map.jsx"
 
 const AboutUs = () => {
     const teamPromise = [
