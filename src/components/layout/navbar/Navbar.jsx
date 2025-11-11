@@ -51,7 +51,7 @@ function Navbar() {
                 </Link>
 
                 {/* lg Screen */}
-                <div className="hidden lg:flex justify-center gap-10">
+                <div className="hidden lg:flex justify-center gap-7">
                     {navItems.slice(0,2).map((item, index) => (
                         <NavbarLink key={index} name={item.name} to={item.to}/>
                     ))}

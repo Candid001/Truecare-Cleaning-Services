@@ -14,7 +14,8 @@
     --color-btn-sec: #00A86B;
     --color-highlight-blue-50: #DDEBFA;
     --color-highlight-blue-500: #0066CC;
-    --color-border-grey: #E2E3E5
+    --color-border-grey: #E2E3E5;
+    --color-btn-tertiary: #003D7A;
 }
 
 body {

@@ -5,6 +5,7 @@ const Button = ({ text, variant, cta, ...props }) => {
         primary: "bg-btn-primary text-white",
         default: "bg-white text-btn-primary",
         secondary: "bg-btn-sec text-white",
+        tertiary: "bg-btn-tertiary text-white",
     };
 
     return (

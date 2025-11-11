@@ -9,7 +9,7 @@ import OfficeAndSMB from "@/pages/OfficeAndSMB.jsx";
 import PMAndRealtors from "@/pages/PMAndRealtors.jsx";
 import ClinicsAndWellnessCenter from "@/pages/ClinicsAndWellnessCenter.jsx";
 import ConstructionCleaning from "@/pages/ConstructionCleaning.jsx";
-import ServiceArea from "../pages/ServiceArea";
+import RequestAQuote from "@/pages/RequestAQuote.jsx";
 import Footer from "../components/layout/Footer";
 
 function AppRoutes() {
@@ -25,7 +25,7 @@ function AppRoutes() {
                     <Route path="property-realtors-cleaning" element={<PMAndRealtors/>}/>
                     <Route path="clinics-and-wellness-centers-cleaning" element={<ClinicsAndWellnessCenter/>}/>
                     <Route path="post-construction-cleaning" element={<ConstructionCleaning/>}/>
-                    <Route path="service-area" element={<ServiceArea/>}/>
+                    <Route path="request-a-quote" element={<RequestAQuote/>}/>
                     <Route path="contact-us" element={<ContactUs/>}/>
                 </Routes>
             </div>
