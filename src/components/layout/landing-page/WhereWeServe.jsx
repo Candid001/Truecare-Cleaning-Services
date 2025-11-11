@@ -1,6 +1,6 @@
 import React from "react";
-import Map from "@assets/map1.svg"
-import MapLg from "@assets/map.svg"
+import Map from "@assets/map1.svg";
+import MapLg from "@assets/map.svg";
 
 const WhereWeServe = () => {
   return (
@@ -20,9 +20,9 @@ const WhereWeServe = () => {
           </div>
         </div>
         <div>
-            <img src={Map} alt="Map" className="md:hidden"/>
-            <img src={MapLg} alt="Map" className="hidden md:flex"/>
-            {/* <MapLg /> */}
+          <img src={Map} alt="Map" className="md:hidden" />
+          <img src={MapLg} alt="Map" className="hidden md:flex" />
+          {/* <MapLg /> */}
         </div>
       </div>
     </div>
