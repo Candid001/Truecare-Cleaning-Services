@@ -30,11 +30,11 @@ const Hero = () => {
         <div className="flex flex-col gap-4 md:flex-row md:justify-center">
           <Button
             text="Call Us: +1-234-567-890"
-            className="bg-white text-[#3184D6] text-[15px] px-5 py-3 rounded-[60px] font-medium w-[207px]"
+            className="bg-white text-[#3184D6] text-[15px] px-5 py-3 rounded-[60px] font-medium w-fit"
           />
           <Button
             text="Request a Quote"
-            className="bg-[#003D7A] text-white text-[15px] px-5 py-3 rounded-[60px] font-medium w-[207px]"
+            className="bg-[#003D7A] text-white text-[15px] px-5 py-3 rounded-[60px] font-medium w-fit"
           />
         </div>
       </div>

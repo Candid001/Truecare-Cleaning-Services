@@ -4,6 +4,7 @@
     --color-btn-primary: #0066CC;
     --color-nav-default: #2B2F32;
     --color-blue-100: #C4DCF5;
+    --color-blue-500: #0066CC;
     --color-shadow: #EAEAEA33;
     --color-text-nav-desc: #565E64;
     --color-muted-blue: #F5FAFF;
@@ -11,6 +12,8 @@
     --color-blue-sec: #3184D6;
     --color-blue-tertiary: #002952;
     --color-btn-sec: #00A86B;
+    --color-highlight-blue-50: #DDEBFA;
+    --color-highlight-blue-500: #0066CC;
     --color-border-grey: #E2E3E5
 }
 

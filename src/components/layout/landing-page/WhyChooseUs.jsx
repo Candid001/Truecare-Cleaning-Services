@@ -17,24 +17,24 @@ const WhyChooseUs = () => {
     {
       id: 2,
       title: "Clear Communication",
-      text: "We keep you updated every step of the way with clear communication before, during, and after our services.",
+      text: "From booking to feedback, our team keeps you informed, responsive, and fully confident in every cleaning session.",
     },
     {
       id: 3,
       title: "Transparent Pricing",
-      text: "No hidden charges or surprises, you always know what you’re paying for.",
+      text: "No hidden fees or confusing packages just honest, upfront rates tailored to your cleaning needs and frequency.",
     },
     {
       id: 4,
       title: "Customer-Focused Care",
-      text: "Our priority is your satisfaction, and we tailor our services to meet your unique needs.",
+      text: "We treat your space like our own, with attention to detail that builds trust and long-term relationships.",
     },
   ];
 
   return (
-    <div className="px-4 md:px-10 lg:px-20 py-10 flex flex-col gap-10">
+    <div className="px-4 md:px-10 py-10 flex flex-col gap-10 lg:flex lg:flex-row lg:justify-between lg:p-30 lg:gap-[60px]">
       <div
-        className="relative bg-cover bg-center w-full h-[400px] md:h-[400px] lg:h-[500px] rounded-2xl transition-all duration-500 ease-in-out"
+        className="relative bg-cover bg-center w-full h-[400px] md:h-[400px] md:w-[588px] lg:h-[550px] rounded-2xl transition-all duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${isAfter ? OfficeAfter : OfficeBefore})`,
         }}
@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Second Div */}
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 lg:w-1/2">
         <div className="flex flex-col gap-6">
           <h1 className="font-semibold text-[40px]">Why Choose Us</h1>
           <p>
@@ -78,9 +78,7 @@ const WhyChooseUs = () => {
               onMouseEnter={() => setActive(item.id)}
               onClick={() => setActive(item.id)}
               className={`cursor-pointer transition-all duration-300 px-4 py-4 ${
-                active === item.id
-                  ? "bg-muted-blue"
-                  : " hover:bg-gray-50"
+                active === item.id ? "bg-muted-blue" : " hover:bg-gray-50"
               }`}
             >
               <div className="flex items-center justify-between">
