@@ -10,7 +10,8 @@
     --color-deep-blue: #003D7A;
     --color-blue-sec: #3184D6;
     --color-blue-tertiary: #002952;
-    --color-btn-sec: #00A86B
+    --color-btn-sec: #00A86B;
+    --color-border-grey: #E2E3E5
 }
 
 body {
