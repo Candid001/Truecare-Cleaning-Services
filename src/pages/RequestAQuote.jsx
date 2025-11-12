@@ -2,7 +2,7 @@ import {serviceCta} from "@lib/utils.jsx";
 
 import ServicesHero from "@components/layout/services/ServicesHero.jsx";
 import ServiceCTA from "@components/layout/services/ServiceCTA.jsx";
-import Button from "@components/ui/Button.jsx";
+import Button from "@/components/Button.jsx";
 import RequestAQuoteForm from "@components/layout/request-a-quote/RequestAQuoteForm.jsx";
 
 function RequestAQuote (){

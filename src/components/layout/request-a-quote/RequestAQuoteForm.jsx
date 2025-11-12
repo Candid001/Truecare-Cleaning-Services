@@ -3,6 +3,7 @@ import Satisfaction from "@assets/satisfaction.svg?component"
 import Professional from "@assets/professional.svg?component"
 import Eco from "@assets/eco-friendly.svg?component"
 import Insured from "@assets/insured.svg?component"
+import MultiStepQuoteForm from "@/components/layout/request-a-quote/MultiStepQuoteForm.jsx";
 
 function RequestAQuoteForm(){
     return (
@@ -10,7 +11,7 @@ function RequestAQuoteForm(){
             <div className="space-y-10">
                 <h2 className={`text-[40px] leading-[120%] md:w-3/5 lg:max-w-1/3 mx-auto text-center font-medium`}>Tell Us About Your Cleaning Needs</h2>
                 {/*Form*/}
-                <div></div>
+                <MultiStepQuoteForm />
             </div>
 
             {/*Additional Info*/}

@@ -1,6 +1,6 @@
 import CTABg from "@assets/cta-bg.svg"
 import {Link} from "react-router-dom";
-import Button from "@components/ui/Button.jsx";
+import Button from "@/components/Button.jsx";
 
 function ServiceCTA({cta, heading, desc, email}) {
     return(
