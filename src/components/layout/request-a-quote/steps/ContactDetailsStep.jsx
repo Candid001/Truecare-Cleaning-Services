@@ -45,14 +45,12 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
   };
 
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-gray-900">Contact Information</h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="space-y-7 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
         {/* First Name */}
         <div className="space-y-2">
           <Label htmlFor="firstName">
-            First Name <span className="text-red-500">*</span>
+            First Name
           </Label>
           <Input
             id="firstName"
@@ -60,17 +58,17 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
             placeholder="Enter your first name"
             value={formData.firstName}
             onChange={(e) => updateFormData("firstName", e.target.value)}
-            className={errors.firstName ? "border-red-500" : ""}
+            className={errors.firstName ? "border-error" : ""}
           />
           {errors.firstName && (
-            <p className="text-sm text-red-500">{errors.firstName}</p>
+            <p className="text-sm text-error">{errors.firstName}</p>
           )}
         </div>
 
         {/* Last Name */}
         <div className="space-y-2">
           <Label htmlFor="lastName">
-            Last Name <span className="text-red-500">*</span>
+            Last Name
           </Label>
           <Input
             id="lastName"
@@ -78,17 +76,17 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
             placeholder="Enter your last name"
             value={formData.lastName}
             onChange={(e) => updateFormData("lastName", e.target.value)}
-            className={errors.lastName ? "border-red-500" : ""}
+            className={errors.lastName ? "border-error" : ""}
           />
           {errors.lastName && (
-            <p className="text-sm text-red-500">{errors.lastName}</p>
+            <p className="text-sm text-error">{errors.lastName}</p>
           )}
         </div>
 
         {/* Email Address */}
         <div className="space-y-2">
           <Label htmlFor="email">
-            Email Address <span className="text-red-500">*</span>
+            Email Address
           </Label>
           <Input
             id="email"
@@ -96,17 +94,17 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
             placeholder="Enter your email address"
             value={formData.email}
             onChange={(e) => updateFormData("email", e.target.value)}
-            className={errors.email ? "border-red-500" : ""}
+            className={errors.email ? "border-error" : ""}
           />
           {errors.email && (
-            <p className="text-sm text-red-500">{errors.email}</p>
+            <p className="text-sm text-error">{errors.email}</p>
           )}
         </div>
 
         {/* Phone Number */}
         <div className="space-y-2">
           <Label htmlFor="phone">
-            Phone Number <span className="text-red-500">*</span>
+            Phone Number
           </Label>
           <div className="relative">
             <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -118,12 +116,12 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
               placeholder="(123) 456-7890"
               value={formData.phone}
               onChange={handlePhoneChange}
-              className={`pl-16 ${errors.phone ? "border-red-500" : ""}`}
+              className={`pl-16 ${errors.phone ? "border-error" : ""}`}
               maxLength={14}
             />
           </div>
           {errors.phone && (
-            <p className="text-sm text-red-500">{errors.phone}</p>
+            <p className="text-sm text-error">{errors.phone}</p>
           )}
         </div>
       </div>
@@ -131,45 +129,45 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
       {/* City */}
       <div className="space-y-2">
         <Label htmlFor="city">
-          City <span className="text-red-500">*</span>
+          Address
         </Label>
         <Input
           id="city"
           type="text"
-          placeholder="Enter your city"
+          placeholder="Enter your address"
           value={formData.city}
           onChange={(e) => updateFormData("city", e.target.value)}
-          className={errors.city ? "border-red-500" : ""}
+          className={errors.city ? "border-error" : ""}
         />
         {errors.city && (
-          <p className="text-sm text-red-500">{errors.city}</p>
+          <p className="text-sm text-error">{errors.city}</p>
         )}
       </div>
 
-      {/* Province */}
-      <div className="space-y-2">
-        <Label htmlFor="province">
-          Province <span className="text-red-500">*</span>
-        </Label>
-        <Select
-          value={formData.province}
-          onValueChange={(value) => updateFormData("province", value)}
-        >
-          <SelectTrigger className={errors.province ? "border-red-500" : ""}>
-            <SelectValue placeholder="Select your province" />
-          </SelectTrigger>
-          <SelectContent>
-            {CANADIAN_PROVINCES.map((province) => (
-              <SelectItem key={province.value} value={province.value}>
-                {province.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        {errors.province && (
-          <p className="text-sm text-red-500">{errors.province}</p>
-        )}
-      </div>
+        {/* Province */}
+        <div className="space-y-2 w-full">
+            <Label htmlFor="province">
+                Province
+            </Label>
+            <Select
+                value={formData.province}
+                onValueChange={(value) => updateFormData("province", value)}
+            >
+                <SelectTrigger className={`w-full ${errors.province ? "border-error" : ""}`}>
+                    <SelectValue placeholder="Select your province" />
+                </SelectTrigger>
+                <SelectContent>
+                    {CANADIAN_PROVINCES.map((province) => (
+                        <SelectItem key={province.value} value={province.value}>
+                            {province.label}
+                        </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
+            {errors.province && (
+                <p className="text-sm text-error">{errors.province}</p>
+            )}
+        </div>
     </div>
   );
 }

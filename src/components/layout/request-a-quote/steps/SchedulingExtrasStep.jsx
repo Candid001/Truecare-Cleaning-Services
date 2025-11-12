@@ -63,14 +63,14 @@ function SchedulingExtrasStep({ formData, updateFormData, errors }) {
       {/* Preferred Cleaning Date */}
       <div className="space-y-2">
         <Label htmlFor="preferredDate">
-          Preferred Cleaning Date <span className="text-red-500">*</span>
+          Preferred Cleaning Date
         </Label>
         <Popover>
           <PopoverTrigger asChild>
             <Button
               variant="outline"
               className={`w-full justify-start text-left font-normal ${
-                errors.preferredDate ? "border-red-500" : ""
+                errors.preferredDate ? "border-error" : ""
               }`}
             >
               <CalendarIcon className="mr-2 h-4 w-4" />
@@ -92,7 +92,7 @@ function SchedulingExtrasStep({ formData, updateFormData, errors }) {
           </PopoverContent>
         </Popover>
         {errors.preferredDate && (
-          <p className="text-sm text-red-500">{errors.preferredDate}</p>
+          <p className="text-sm text-error">{errors.preferredDate}</p>
         )}
       </div>
 
@@ -128,13 +128,13 @@ function SchedulingExtrasStep({ formData, updateFormData, errors }) {
       {/* Preferred Time */}
       <div className="space-y-2">
         <Label htmlFor="preferredTime">
-          Preferred Time <span className="text-red-500">*</span>
+          Preferred Time
         </Label>
         <Select
           value={formData.preferredTime}
           onValueChange={(value) => updateFormData("preferredTime", value)}
         >
-          <SelectTrigger className={errors.preferredTime ? "border-red-500" : ""}>
+          <SelectTrigger className={`${errors.preferredTime ? "border-error" : ""} w-full`}>
             <SelectValue placeholder="Select time (Morning, Afternoon, Flexible)" />
           </SelectTrigger>
           <SelectContent>
@@ -146,7 +146,7 @@ function SchedulingExtrasStep({ formData, updateFormData, errors }) {
           </SelectContent>
         </Select>
         {errors.preferredTime && (
-          <p className="text-sm text-red-500">{errors.preferredTime}</p>
+          <p className="text-sm text-error">{errors.preferredTime}</p>
         )}
       </div>
 
@@ -158,8 +158,8 @@ function SchedulingExtrasStep({ formData, updateFormData, errors }) {
           placeholder="Add any specific instructions or requests"
           value={formData.additionalNotes}
           onChange={(e) => updateFormData("additionalNotes", e.target.value)}
-          rows={5}
-          className="resize-none"
+          rows={10}
+          className={`min-h-[150px]`}
         />
         <p className="text-sm text-gray-500">
           Optional: Share any special requirements or areas of focus
