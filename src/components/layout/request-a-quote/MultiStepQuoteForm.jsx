@@ -8,6 +8,7 @@ import SuccessModal from "./SuccessModal";
 import StepIndicator from "@/components/layout/request-a-quote/StepIndicator.jsx";
 import Caution from "@assets/caution.svg?component"
 import Button from "@/components/Button.jsx";
+import { cn } from "@/lib/utils"
 
 const STEPS = {
     CONTACT: 1,
@@ -319,16 +320,29 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
     };
 
     return (
-        <>
-            <div className="bg-blue-tert rounded-lg md:w-4/5 lg:w-[55%] mx-auto p-5 space-y-10">
+        <div className="space-y-5 md:space-y-10">
+            <div className={`w-fit mx-auto space-y-5`}>
+                <h2 className={cn("md:text-[40px] text-2xl leading-[120%]", currentStep !== 4 && "md:w-3/5 mx-auto", "text-center font-medium")}>
+                    {currentStep === 4 ? "Review Your Details": "Tell Us About Your Cleaning Need"}
+                </h2>
+
+                {currentStep === 4 &&
+                    <p className={cn("xl:max-w-3/5 lg:max-w-[70%] md:max-w-[75%] mx-auto text-center text-xs md:text-base")}>
+                        Please take a moment to confirm your information and service details. Once everything looks right,
+                        submit your request to receive your personalized cleaning quote.
+                    </p>
+                }
+            </div>
+
+            <div className={cn(currentStep < STEPS.REVIEW && "bg-blue-tert"," rounded-lg md:w-4/5 xl:w-[55%] mx-auto p-3 lg:p-5 space-y-10")}>
                 <div className="space-y-5">
                     {/* Step Indicator */}
-                    <StepIndicator currentStep={currentStep} />
+                    {currentStep < STEPS.REVIEW &&  <StepIndicator currentStep={currentStep} />}
 
                     {/* Privacy Notice */}
-                    <div className="bg-blue-muted-pri py-2 rounded-sm">
+                    <div className="bg-blue-muted-pri py-2 px-5 rounded-sm">
                         <div className="flex items-center justify-center gap-3">
-                            <Caution />
+                            <Caution className={cn("hidden md:block")}/>
                             <p className="text-xs text-btn-primary">
                                 We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
                             </p>
@@ -338,14 +352,14 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
 
                 {/* Form Step Content */}
                 <div className="space-y-5">
-                    <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling"}</p>
+                    {currentStep < STEPS.REVIEW  && <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling"}</p> }
                     {renderStep()}
                 </div>
 
                 {/* Navigation Buttons */}
                 <div className="flex items-center gap-5 justify-between">
                     {currentStep > STEPS.CONTACT ? (
-                        <Button variant={`form`} width={'w-1/2 md:w-[220px]'} onClick={handleBack} text={currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"} />
+                        <Button variant={`form`} width={'w-1/2 md:w-[220px]'} onClick={handleBack} text={"Back"} />
                     ) : (
                         <Button onClick={() => (window.location.href = "/")}  width={'w-1/2 md:w-[220px]'} text={"Home"} variant={`form`} />
                     )}
@@ -353,7 +367,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                     {currentStep < STEPS.REVIEW ? (
                         <Button variant={`primary`} text={ `Next`}  width={'w-1/2 md:w-[220px]'} onClick={handleNext}/>
                     ) : (
-                        <Button variant={`primary`} width={'w-1/2 md:w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit Quote Request"} onClick={handleSubmit} disabled={isSubmitting}/>
+                        <Button variant={`primary`} width={'w-1/2 md:w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit"} onClick={handleSubmit} disabled={isSubmitting}/>
                     )}
                 </div>
             </div>
@@ -362,7 +376,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                 isOpen={showSuccessModal}
                 onClose={() => setShowSuccessModal(false)}
             />
-        </>
+        </div>
     );
 }
 

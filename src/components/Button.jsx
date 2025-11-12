@@ -11,7 +11,7 @@ const Button = ({ text, variant, cta, width, ...props }) => {
 
     return (
         <button
-            className={`px-6 ${cta ? "py-4": "py-2.5"} rounded-4xl font-medium transition-colors ${width} cursor-pointer ${variants[variant]}`}
+            className={`px-6 ${cta ? "py-4": "py-2.5"} rounded-4xl font-medium transition-colors ${width ? `${width}`: "w-full"} cursor-pointer ${variants[variant]}`}
             {...props}
         >
             {text}

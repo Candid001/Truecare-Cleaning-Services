@@ -8,11 +8,8 @@ import MultiStepQuoteForm from "@/components/layout/request-a-quote/MultiStepQuo
 function RequestAQuoteForm(){
     return (
         <div className={`py-10 md:py-20 px-3 md:px-0 space-y-20`}>
-            <div className="space-y-10">
-                <h2 className={`text-[40px] leading-[120%] md:w-3/5 lg:max-w-1/3 mx-auto text-center font-medium`}>Tell Us About Your Cleaning Needs</h2>
-                {/*Form*/}
-                <MultiStepQuoteForm />
-            </div>
+            {/*Form*/}
+            <MultiStepQuoteForm />
 
             {/*Additional Info*/}
             <div className={`space-y-5`}>

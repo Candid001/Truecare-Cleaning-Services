@@ -129,12 +129,12 @@ function ContactDetailsStep({ formData, updateFormData, errors }) {
       {/* City */}
       <div className="space-y-2">
         <Label htmlFor="city">
-          City
+          Address
         </Label>
         <Input
           id="city"
           type="text"
-          placeholder="Enter your city"
+          placeholder="Enter your address"
           value={formData.city}
           onChange={(e) => updateFormData("city", e.target.value)}
           className={errors.city ? "border-error" : ""}
