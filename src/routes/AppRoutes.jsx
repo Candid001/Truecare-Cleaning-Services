@@ -11,6 +11,7 @@ import ClinicsAndWellnessCenter from "@/pages/ClinicsAndWellnessCenter.jsx";
 import ConstructionCleaning from "@/pages/ConstructionCleaning.jsx";
 import RequestAQuote from "@/pages/RequestAQuote.jsx";
 import Footer from "../components/layout/Footer";
+import { Toaster } from "sonner";
 
 function AppRoutes() {
     return (
@@ -30,6 +31,7 @@ function AppRoutes() {
                 </Routes>
             </div>
             <Footer/>
+            <Toaster position="top-center" richColors />
         </BrowserRouter>
     );
 }

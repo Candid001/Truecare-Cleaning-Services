@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "@assets/frame106.svg";
-import Button from "../../ui/Button";
+import Button from "../../Button.jsx";
 
 const CallToAction = () => {
   return (

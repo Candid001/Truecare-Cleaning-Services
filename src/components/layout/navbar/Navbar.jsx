@@ -1,6 +1,6 @@
 import {useState, useRef, useEffect} from "react";
 import {Link} from "react-router-dom";
-import Button from "../../ui/Button.jsx";
+import Button from "../../Button.jsx";
 //TODO: Use icon like this, check line 23
 import Logo from "@assets/logo-full.svg?component";
 import {Menu, X} from "lucide-react";

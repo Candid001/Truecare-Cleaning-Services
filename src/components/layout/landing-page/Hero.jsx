@@ -1,6 +1,6 @@
 import React from "react";
 import Ficon from "@assets/frame.svg?component";
-import Button from "../../ui/Button";
+import Button from "../../Button.jsx";
 import HeroImg from "@assets/hero-bg1.svg"
 
 const Hero = () => {
