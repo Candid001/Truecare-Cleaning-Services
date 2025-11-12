@@ -5,12 +5,12 @@ import Button from "../../Button.jsx";
 const CallToAction = () => {
   return (
     <div
-      className="space-y-10 py-20 px-auto overflow-hidden bg-cover bg-center"
+      className="py-20 px-auto overflow-hidden bg-cover bg-center lg:flex"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0,51,102,0.85) 40%, rgba(0,51,102,0) 70%), url(${Image})`,
       }}
     >
-      <div className="flex flex-col gap-2 w-[90%] mx-auto">
+      <div className="flex flex-col gap-2 w-[90%] mx-auto lg:align-left">
         <p className="text-highlight-blue-500 bg-muted-blue p-1 w-fit rounded-sm text-sm">
           Ready for a Cleaner Space?
         </p>

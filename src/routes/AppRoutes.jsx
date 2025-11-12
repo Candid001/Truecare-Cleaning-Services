@@ -17,7 +17,7 @@ function AppRoutes() {
     return (
         <BrowserRouter>
             <Navbar/>
-            <div className={`max-w-7xl mx-auto shadow-md`}>
+            <div className={`max-w-full mx-auto shadow-md`}>
                 <div className="mt-18">
                     <Routes>
                         <Route path="/" element={<Home/>}/>
