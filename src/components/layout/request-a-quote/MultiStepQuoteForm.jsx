@@ -320,22 +320,27 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
 
     return (
         <>
-            <div className="bg-blue-tert rounded-lg w-3/5 mx-auto p-5 space-y-10">
-                {/* Step Indicator */}
-                <StepIndicator currentStep={currentStep} />
+            <div className="bg-blue-tert rounded-lg w-[55%] mx-auto p-5 space-y-10">
+                <div className="space-y-5">
+                    {/* Step Indicator */}
+                    <StepIndicator currentStep={currentStep} />
 
-                {/* Privacy Notice */}
-                <div className="bg-blue-muted-pri py-2 rounded-sm">
-                    <div className="flex items-center justify-center gap-3">
-                        <Caution />
-                        <p className="text-xs text-btn-primary">
-                            We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
-                        </p>
+                    {/* Privacy Notice */}
+                    <div className="bg-blue-muted-pri py-2 rounded-sm">
+                        <div className="flex items-center justify-center gap-3">
+                            <Caution />
+                            <p className="text-xs text-btn-primary">
+                                We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 {/* Form Step Content */}
-                <div className="">{renderStep()}</div>
+                <div className="space-y-5">
+                    <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling "}</p>
+                    {renderStep()}
+                </div>
 
                 {/* Navigation Buttons */}
                 <div className="flex items-center justify-between">
