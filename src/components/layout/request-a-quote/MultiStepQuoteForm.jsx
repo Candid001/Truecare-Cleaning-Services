@@ -1,186 +1,188 @@
-import { useState } from "react";
-import { toast } from "sonner";
+import {useState} from "react";
+import {toast} from "sonner";
 import ContactDetailsStep from "./steps/ContactDetailsStep";
 import ServiceDetailsStep from "./steps/ServiceDetailsStep";
 import SchedulingExtrasStep from "./steps/SchedulingExtrasStep";
 import ReviewSubmitStep from "./steps/ReviewSubmitStep";
 import SuccessModal from "./SuccessModal";
+import StepIndicator from "@/components/layout/request-a-quote/StepIndicator.jsx";
+import Caution from "@assets/caution.svg?component"
+import Button from "@/components/Button.jsx";
+import { cn } from "@/lib/utils"
 
 const STEPS = {
-  CONTACT: 1,
-  SERVICE: 2,
-  SCHEDULING: 3,
-  REVIEW: 4,
+    CONTACT: 1,
+    SERVICE: 2,
+    SCHEDULING: 3,
+    REVIEW: 4,
 };
 
 function MultiStepQuoteForm() {
-  const [currentStep, setCurrentStep] = useState(STEPS.CONTACT);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+    const [currentStep, setCurrentStep] = useState(STEPS.CONTACT);
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [formData, setFormData] = useState({
-    // Contact Information
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    city: "",
-    province: "",
+    const [formData, setFormData] = useState({
+        // Contact Information
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        city: "",
+        province: "",
 
-    // Service Details
-    propertyType: "",
-    serviceType: "",
-    spaceSize: "",
-    rooms: "",
-    bathrooms: "",
-    cleaningFrequency: "",
-    cleanlinessLevel: "",
-    provideSupplies: "",
-    provideCleaning: "",
-    hasPets: "",
+        // Service Details
+        propertyType: "",
+        serviceType: "",
+        spaceSize: "",
+        rooms: "",
+        bathrooms: "",
+        cleaningFrequency: "",
+        cleanlinessLevel: "",
+        provideSupplies: "",
+        provideCleaning: "",
+        hasPets: "",
 
-    // Scheduling & Extras
-    preferredDate: "",
-    alternateDate: "",
-    preferredTime: "",
-    additionalNotes: "",
-    photos: [],
-  });
+        // Scheduling & Extras
+        preferredDate: "",
+        alternateDate: "",
+        preferredTime: "",
+        additionalNotes: "",
+        photos: [],
+    });
 
-  const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({});
 
-  const updateFormData = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error for this field when user updates it
-    if (errors[field]) {
-      setErrors((prev) => {
-        const newErrors = { ...prev };
-        delete newErrors[field];
-        return newErrors;
-      });
-    }
-  };
+    const updateFormData = (field, value) => {
+        setFormData((prev) => ({...prev, [field]: value}));
+        // Clear error for this field when user updates it
+        if (errors[field]) {
+            setErrors((prev) => {
+                const newErrors = {...prev};
+                delete newErrors[field];
+                return newErrors;
+            });
+        }
+    };
 
-  const validateContactStep = () => {
-    const newErrors = {};
+    const validateContactStep = () => {
+        const newErrors = {};
 
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
-    }
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    }
-    if (!formData.city.trim()) {
-      newErrors.city = "City is required";
-    }
-    if (!formData.province) {
-      newErrors.province = "Province is required";
-    }
+        if (!formData.firstName.trim()) {
+            newErrors.firstName = "First name is required";
+        }
+        if (!formData.lastName.trim()) {
+            newErrors.lastName = "Last name is required";
+        }
+        if (!formData.email.trim()) {
+            newErrors.email = "Email is required";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            newErrors.email = "Please enter a valid email address";
+        }
+        if (!formData.phone.trim()) {
+            newErrors.phone = "Phone number is required";
+        }
+        if (!formData.city.trim()) {
+            newErrors.city = "City is required";
+        }
+        if (!formData.province) {
+            newErrors.province = "Province is required";
+        }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
-  const validateServiceStep = () => {
-    const newErrors = {};
+    const validateServiceStep = () => {
+        const newErrors = {};
 
-    if (!formData.propertyType) {
-      newErrors.propertyType = "Property type is required";
-    }
-    if (!formData.serviceType) {
-      newErrors.serviceType = "Service type is required";
-    }
-    if (!formData.spaceSize.trim()) {
-      newErrors.spaceSize = "Space size is required";
-    }
-    if (!formData.rooms) {
-      newErrors.rooms = "Number of rooms is required";
-    }
-    if (!formData.bathrooms) {
-      newErrors.bathrooms = "Number of bathrooms is required";
-    }
-    if (!formData.cleaningFrequency.trim()) {
-      newErrors.cleaningFrequency = "Cleaning frequency is required";
-    }
-    if (!formData.cleanlinessLevel) {
-      newErrors.cleanlinessLevel = "Cleanliness level is required";
-    }
-    if (!formData.provideSupplies) {
-      newErrors.provideSupplies = "Please specify if you'll provide supplies";
-    }
-    if (!formData.provideCleaning) {
-      newErrors.provideCleaning = "Please specify if you'll provide cleaning supplies";
-    }
-    if (!formData.hasPets) {
-      newErrors.hasPets = "Please specify if you have pets";
-    }
+        if (!formData.propertyType) {
+            newErrors.propertyType = "Property type is required";
+        }
+        if (!formData.serviceType) {
+            newErrors.serviceType = "Service type is required";
+        }
+        if (!formData.spaceSize.trim()) {
+            newErrors.spaceSize = "Space size is required";
+        }
+        if (!formData.rooms) {
+            newErrors.rooms = "Number of rooms is required";
+        }
+        if (!formData.bathrooms) {
+            newErrors.bathrooms = "Number of bathrooms is required";
+        }
+        if (!formData.cleaningFrequency.trim()) {
+            newErrors.cleaningFrequency = "Cleaning frequency is required";
+        }
+        if (!formData.cleanlinessLevel) {
+            newErrors.cleanlinessLevel = "Cleanliness level is required";
+        }
+        if (!formData.provideSupplies) {
+            newErrors.provideSupplies = "Please specify if you'll provide supplies";
+        }
+        if (!formData.provideCleaning) {
+            newErrors.provideCleaning = "Please specify if you'll provide cleaning supplies";
+        }
+        if (!formData.hasPets) {
+            newErrors.hasPets = "Please specify if you have pets";
+        }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
-  const validateSchedulingStep = () => {
-    const newErrors = {};
+    const validateSchedulingStep = () => {
+        const newErrors = {};
 
-    if (!formData.preferredDate) {
-      newErrors.preferredDate = "Preferred date is required";
-    }
-    if (!formData.preferredTime) {
-      newErrors.preferredTime = "Preferred time is required";
-    }
+        if (!formData.preferredDate) {
+            newErrors.preferredDate = "Preferred date is required";
+        }
+        if (!formData.preferredTime) {
+            newErrors.preferredTime = "Preferred time is required";
+        }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
-  const handleNext = () => {
-    let isValid = false;
+    const handleNext = () => {
+        let isValid = false;
 
-    if (currentStep === STEPS.CONTACT) {
-      isValid = validateContactStep();
-    } else if (currentStep === STEPS.SERVICE) {
-      isValid = validateServiceStep();
-    } else if (currentStep === STEPS.SCHEDULING) {
-      isValid = validateSchedulingStep();
-    }
+        if (currentStep === STEPS.CONTACT) {
+            isValid = validateContactStep();
+        } else if (currentStep === STEPS.SERVICE) {
+            isValid = validateServiceStep();
+        } else if (currentStep === STEPS.SCHEDULING) {
+            isValid = validateSchedulingStep();
+        }
 
-    if (isValid) {
-      setCurrentStep((prev) => prev + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      toast.error("Please fill in all required fields");
-    }
-  };
+        if (isValid) {
+            setCurrentStep((prev) => prev + 1);
+        } else {
+            toast.error("Please fill in all required fields");
+        }
+    };
 
-  const handleBack = () => {
-    setCurrentStep((prev) => prev - 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    const handleBack = () => {
+        setCurrentStep((prev) => prev - 1);
+    };
 
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
+    const handleSubmit = async () => {
+        setIsSubmitting(true);
 
-    try {
-      // Format the message for Telegram
-      const message = `
+        try {
+            // Format the message for Telegram
+            const message = `
 🧹 *New Cleaning Quote Request*
 
-👤 *Contact Information*
+*Contact Information*
 Name: ${formData.firstName} ${formData.lastName}
 Email: ${formData.email}
 Phone: ${formData.phone}
 City: ${formData.city}
 Province: ${formData.province}
 
-🏠 *Service Details*
+ *Service Details*
 Property Type: ${formData.propertyType}
 Service Type: ${formData.serviceType}
 Space Size: ${formData.spaceSize}
@@ -200,243 +202,182 @@ Preferred Time: ${formData.preferredTime}
 ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNotes}` : ""}
       `.trim();
 
-      // Replace with your Telegram Bot Token and Chat ID
-      const TELEGRAM_BOT_TOKEN = "8255936518:AAEOpIvD2H2-H2RUmzn3bB1KkLKaBw829XM";
-      const TELEGRAM_CHAT_ID = "6487668702";
+            // Replace with your Telegram Bot Token and Chat ID
+            const TELEGRAM_BOT_TOKEN = "8255936518:AAEOpIvD2H2-H2RUmzn3bB1KkLKaBw829XM";
+            const TELEGRAM_CHAT_ID = "6487668702";
 
-      const response = await fetch(
-        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
-            text: message,
-            parse_mode: "Markdown",
-          }),
-        }
-      );
+            const response = await fetch(
+                `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: "Markdown",
+                    }),
+                }
+            );
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
-
-      // Handle photo uploads if any
-      if (formData.photos.length > 0) {
-        for (const photo of formData.photos) {
-          const photoFormData = new FormData();
-          photoFormData.append("chat_id", TELEGRAM_CHAT_ID);
-          photoFormData.append("photo", photo);
-          photoFormData.append("caption", "Quote request photo");
-
-          await fetch(
-            `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`,
-            {
-              method: "POST",
-              body: photoFormData,
+            if (!response.ok) {
+                throw new Error("Failed to send message");
             }
-          );
+
+            // Handle photo uploads if any
+            if (formData.photos.length > 0) {
+                for (const photo of formData.photos) {
+                    const photoFormData = new FormData();
+                    photoFormData.append("chat_id", TELEGRAM_CHAT_ID);
+                    photoFormData.append("photo", photo);
+                    photoFormData.append("caption", "Quote request photo");
+
+                    await fetch(
+                        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`,
+                        {
+                            method: "POST",
+                            body: photoFormData,
+                        }
+                    );
+                }
+            }
+
+            setShowSuccessModal(true);
+            toast.success("Quote request submitted successfully!");
+
+            // Reset form after successful submission
+            setTimeout(() => {
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    city: "",
+                    province: "",
+                    propertyType: "",
+                    serviceType: "",
+                    spaceSize: "",
+                    rooms: "",
+                    bathrooms: "",
+                    cleaningFrequency: "",
+                    cleanlinessLevel: "",
+                    provideSupplies: "",
+                    provideCleaning: "",
+                    hasPets: "",
+                    preferredDate: "",
+                    alternateDate: "",
+                    preferredTime: "",
+                    additionalNotes: "",
+                    photos: [],
+                });
+                setCurrentStep(STEPS.CONTACT);
+            }, 3000);
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            toast.error("Failed to submit quote request. Please try again.");
+        } finally {
+            setIsSubmitting(false);
         }
-      }
+    };
 
-      setShowSuccessModal(true);
-      toast.success("Quote request submitted successfully!");
+    const renderStep = () => {
+        switch (currentStep) {
+            case STEPS.CONTACT:
+                return (
+                    <ContactDetailsStep
+                        formData={formData}
+                        updateFormData={updateFormData}
+                        errors={errors}
+                    />
+                );
+            case STEPS.SERVICE:
+                return (
+                    <ServiceDetailsStep
+                        formData={formData}
+                        updateFormData={updateFormData}
+                        errors={errors}
+                    />
+                );
+            case STEPS.SCHEDULING:
+                return (
+                    <SchedulingExtrasStep
+                        formData={formData}
+                        updateFormData={updateFormData}
+                        errors={errors}
+                    />
+                );
+            case STEPS.REVIEW:
+                return (
+                    <ReviewSubmitStep
+                        formData={formData}
+                        onEdit={(step) => setCurrentStep(step)}
+                    />
+                );
+            default:
+                return null;
+        }
+    };
 
-      // Reset form after successful submission
-      setTimeout(() => {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          city: "",
-          province: "",
-          propertyType: "",
-          serviceType: "",
-          spaceSize: "",
-          rooms: "",
-          bathrooms: "",
-          cleaningFrequency: "",
-          cleanlinessLevel: "",
-          provideSupplies: "",
-          provideCleaning: "",
-          hasPets: "",
-          preferredDate: "",
-          alternateDate: "",
-          preferredTime: "",
-          additionalNotes: "",
-          photos: [],
-        });
-        setCurrentStep(STEPS.CONTACT);
-      }, 3000);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("Failed to submit quote request. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    return (
+        <div className="space-y-5 md:space-y-10">
+            <div className={`w-fit mx-auto space-y-5`}>
+                <h2 className={cn("md:text-[40px] text-2xl leading-[120%]", currentStep !== 4 && "md:w-3/5 mx-auto", "text-center font-medium")}>
+                    {currentStep === 4 ? "Review Your Details": "Tell Us About Your Cleaning Need"}
+                </h2>
 
-  const renderStep = () => {
-    switch (currentStep) {
-      case STEPS.CONTACT:
-        return (
-          <ContactDetailsStep
-            formData={formData}
-            updateFormData={updateFormData}
-            errors={errors}
-          />
-        );
-      case STEPS.SERVICE:
-        return (
-          <ServiceDetailsStep
-            formData={formData}
-            updateFormData={updateFormData}
-            errors={errors}
-          />
-        );
-      case STEPS.SCHEDULING:
-        return (
-          <SchedulingExtrasStep
-            formData={formData}
-            updateFormData={updateFormData}
-            errors={errors}
-          />
-        );
-      case STEPS.REVIEW:
-        return (
-          <ReviewSubmitStep
-            formData={formData}
-            onEdit={(step) => setCurrentStep(step)}
-          />
-        );
-      default:
-        return null;
-    }
-  };
+                {currentStep === 4 &&
+                    <p className={cn("xl:max-w-3/5 lg:max-w-[70%] md:max-w-[75%] mx-auto text-center text-xs md:text-base")}>
+                        Please take a moment to confirm your information and service details. Once everything looks right,
+                        submit your request to receive your personalized cleaning quote.
+                    </p>
+                }
+            </div>
 
-  return (
-    <>
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm">
-        {/* Step Indicator */}
-        <div className="flex items-center justify-center py-8 px-4">
-          <div className="flex items-center w-full max-w-2xl">
-            {[
-              { num: 1, label: "Contact Details" },
-              { num: 2, label: "Service Details" },
-              { num: 3, label: "Scheduling & Extras" },
-            ].map((step, index) => (
-              <div key={step.num} className="flex items-center flex-1">
-                <div className="flex flex-col items-center flex-1">
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg transition-colors ${
-                      currentStep >= step.num
-                        ? "bg-blue-600 text-white"
-                        : "bg-gray-200 text-gray-500"
-                    }`}
-                  >
-                    {step.num}
-                  </div>
-                  <span
-                    className={`text-sm mt-2 text-center ${
-                      currentStep >= step.num
-                        ? "text-gray-900 font-medium"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    Step {step.num}:
-                  </span>
-                  <span
-                    className={`text-xs text-center ${
-                      currentStep >= step.num ? "text-gray-700" : "text-gray-400"
-                    }`}
-                  >
-                    {step.label}
-                  </span>
+            <div className={cn(currentStep < STEPS.REVIEW && "bg-blue-tert"," rounded-lg md:w-4/5 xl:w-[55%] mx-auto p-3 lg:p-5 space-y-10")}>
+                <div className="space-y-5">
+                    {/* Step Indicator */}
+                    {currentStep < STEPS.REVIEW &&  <StepIndicator currentStep={currentStep} />}
+
+                    {/* Privacy Notice */}
+                    <div className="bg-blue-muted-pri py-2 px-5 rounded-sm">
+                        <div className="flex items-center justify-center gap-3">
+                            <Caution className={cn("hidden md:block")}/>
+                            <p className="text-xs text-btn-primary">
+                                We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                {index < 2 && (
-                  <div
-                    className={`h-1 flex-1 mx-2 transition-colors ${
-                      currentStep > step.num ? "bg-blue-600" : "bg-gray-200"
-                    }`}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
+
+                {/* Form Step Content */}
+                <div className="space-y-5">
+                    {currentStep < STEPS.REVIEW  && <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling"}</p> }
+                    {renderStep()}
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="flex items-center gap-5 justify-between">
+                    {currentStep > STEPS.CONTACT ? (
+                        <Button variant={`form`} width={'w-1/2 md:w-[220px]'} onClick={handleBack} text={"Back"} />
+                    ) : (
+                        <Button onClick={() => (window.location.href = "/")}  width={'w-1/2 md:w-[220px]'} text={"Home"} variant={`form`} />
+                    )}
+
+                    {currentStep < STEPS.REVIEW ? (
+                        <Button variant={`primary`} text={ `Next`}  width={'w-1/2 md:w-[220px]'} onClick={handleNext}/>
+                    ) : (
+                        <Button variant={`primary`} width={'w-1/2 md:w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit"} onClick={handleSubmit} disabled={isSubmitting}/>
+                    )}
+                </div>
+            </div>
+
+            <SuccessModal
+                isOpen={showSuccessModal}
+                onClose={() => setShowSuccessModal(false)}
+            />
         </div>
-
-        {/* Privacy Notice */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mx-4 mb-6">
-          <div className="flex items-start gap-3">
-            <svg
-              className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-              />
-            </svg>
-            <p className="text-sm text-blue-800">
-              We respect your privacy. Your information is only used to prepare your
-              cleaning quote, never shared or sold.
-            </p>
-          </div>
-        </div>
-
-        {/* Form Step Content */}
-        <div className="px-4 pb-8">{renderStep()}</div>
-
-        {/* Navigation Buttons */}
-        <div className="flex items-center justify-between px-4 pb-8">
-          {currentStep > STEPS.CONTACT ? (
-            <button
-              onClick={handleBack}
-              className="px-6 py-3 text-blue-600 font-medium hover:text-blue-700 transition-colors"
-            >
-              {currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"}
-            </button>
-          ) : (
-            <button
-              onClick={() => (window.location.href = "/")}
-              className="px-6 py-3 text-blue-600 font-medium hover:text-blue-700 transition-colors"
-            >
-              Back to Home
-            </button>
-          )}
-
-          {currentStep < STEPS.REVIEW ? (
-            <button
-              onClick={handleNext}
-              className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors"
-            >
-              Next
-            </button>
-          ) : (
-            <button
-              onClick={handleSubmit}
-              disabled={isSubmitting}
-              className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? "Submitting..." : "Submit Quote Request"}
-            </button>
-          )}
-        </div>
-      </div>
-
-      <SuccessModal
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-      />
-    </>
-  );
+    );
 }
 
 export default MultiStepQuoteForm;

@@ -51,19 +51,17 @@ const CLEANLINESS_LEVELS = [
 function ServiceDetailsStep({ formData, updateFormData, errors }) {
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-gray-900">Service Details</h2>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Property Type */}
         <div className="space-y-2">
           <Label htmlFor="propertyType">
-            Property Type <span className="text-red-500">*</span>
+            Property Type
           </Label>
           <Select
             value={formData.propertyType}
             onValueChange={(value) => updateFormData("propertyType", value)}
           >
-            <SelectTrigger className={errors.propertyType ? "border-red-500" : ""}>
+            <SelectTrigger className={`w-full ${errors.propertyType ? "border-error" : ""}`}>
               <SelectValue placeholder="Select type (Home, Office, etc.)" />
             </SelectTrigger>
             <SelectContent>
@@ -75,20 +73,20 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.propertyType && (
-            <p className="text-sm text-red-500">{errors.propertyType}</p>
+            <p className="text-sm text-error">{errors.propertyType}</p>
           )}
         </div>
 
         {/* Service Type */}
         <div className="space-y-2">
           <Label htmlFor="serviceType">
-            Service Type <span className="text-red-500">*</span>
+            Service Type
           </Label>
           <Select
             value={formData.serviceType}
             onValueChange={(value) => updateFormData("serviceType", value)}
           >
-            <SelectTrigger className={errors.serviceType ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.serviceType ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Choose a cleaning service" />
             </SelectTrigger>
             <SelectContent>
@@ -100,14 +98,14 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.serviceType && (
-            <p className="text-sm text-red-500">{errors.serviceType}</p>
+            <p className="text-sm text-error">{errors.serviceType}</p>
           )}
         </div>
 
         {/* Size of Space */}
         <div className="space-y-2">
           <Label htmlFor="spaceSize">
-            Size of Space <span className="text-red-500">*</span>
+            Size of Space
           </Label>
           <Input
             id="spaceSize"
@@ -115,23 +113,23 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             placeholder="e.g. 1000-2000 sqft"
             value={formData.spaceSize}
             onChange={(e) => updateFormData("spaceSize", e.target.value)}
-            className={errors.spaceSize ? "border-red-500" : ""}
+            className={errors.spaceSize ? "border-error" : ""}
           />
           {errors.spaceSize && (
-            <p className="text-sm text-red-500">{errors.spaceSize}</p>
+            <p className="text-sm text-error">{errors.spaceSize}</p>
           )}
         </div>
 
         {/* Rooms / Bedrooms */}
         <div className="space-y-2">
           <Label htmlFor="rooms">
-            Rooms / Bedrooms <span className="text-red-500">*</span>
+            Rooms / Bedrooms
           </Label>
           <Select
             value={formData.rooms}
             onValueChange={(value) => updateFormData("rooms", value)}
           >
-            <SelectTrigger className={errors.rooms ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.rooms ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Select number of rooms" />
             </SelectTrigger>
             <SelectContent>
@@ -143,20 +141,20 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.rooms && (
-            <p className="text-sm text-red-500">{errors.rooms}</p>
+            <p className="text-sm text-error">{errors.rooms}</p>
           )}
         </div>
 
         {/* Bathrooms */}
         <div className="space-y-2">
           <Label htmlFor="bathrooms">
-            Bathrooms <span className="text-red-500">*</span>
+            Bathrooms
           </Label>
           <Select
             value={formData.bathrooms}
             onValueChange={(value) => updateFormData("bathrooms", value)}
           >
-            <SelectTrigger className={errors.bathrooms ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.bathrooms ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Select number of bathrooms" />
             </SelectTrigger>
             <SelectContent>
@@ -168,14 +166,14 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.bathrooms && (
-            <p className="text-sm text-red-500">{errors.bathrooms}</p>
+            <p className="text-sm text-error">{errors.bathrooms}</p>
           )}
         </div>
 
         {/* Cleaning Frequency */}
         <div className="space-y-2">
           <Label htmlFor="cleaningFrequency">
-            Cleaning Frequency <span className="text-red-500">*</span>
+            Cleaning Frequency
           </Label>
           <Input
             id="cleaningFrequency"
@@ -183,23 +181,23 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             placeholder="e.g. One-time, Weekly"
             value={formData.cleaningFrequency}
             onChange={(e) => updateFormData("cleaningFrequency", e.target.value)}
-            className={errors.cleaningFrequency ? "border-red-500" : ""}
+            className={errors.cleaningFrequency ? "border-error" : ""}
           />
           {errors.cleaningFrequency && (
-            <p className="text-sm text-red-500">{errors.cleaningFrequency}</p>
+            <p className="text-sm text-error">{errors.cleaningFrequency}</p>
           )}
         </div>
 
         {/* Cleanliness Level */}
         <div className="space-y-2">
           <Label htmlFor="cleanlinessLevel">
-            Cleanliness Level <span className="text-red-500">*</span>
+            Cleanliness Level
           </Label>
           <Select
             value={formData.cleanlinessLevel}
             onValueChange={(value) => updateFormData("cleanlinessLevel", value)}
           >
-            <SelectTrigger className={errors.cleanlinessLevel ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.cleanlinessLevel ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Light, Moderate, or Heavy" />
             </SelectTrigger>
             <SelectContent>
@@ -211,14 +209,14 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.cleanlinessLevel && (
-            <p className="text-sm text-red-500">{errors.cleanlinessLevel}</p>
+            <p className="text-sm text-error">{errors.cleanlinessLevel}</p>
           )}
         </div>
 
         {/* Will you provide supplies? */}
         <div className="space-y-2">
           <Label htmlFor="provideSupplies">
-            Will you provide supplies? <span className="text-red-500">*</span>
+            Will you provide supplies?
           </Label>
           <Input
             id="provideSupplies"
@@ -226,10 +224,10 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             placeholder="Yes or No."
             value={formData.provideSupplies}
             onChange={(e) => updateFormData("provideSupplies", e.target.value)}
-            className={errors.provideSupplies ? "border-red-500" : ""}
+            className={errors.provideSupplies ? "border-error" : ""}
           />
           {errors.provideSupplies && (
-            <p className="text-sm text-red-500">{errors.provideSupplies}</p>
+            <p className="text-sm text-error">{errors.provideSupplies}</p>
           )}
         </div>
       </div>
@@ -238,13 +236,13 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
         {/* Will you provide cleaning supplies? */}
         <div className="space-y-2">
           <Label htmlFor="provideCleaning">
-            Will you provide cleaning supplies? <span className="text-red-500">*</span>
+            Will you provide cleaning supplies?
           </Label>
           <Select
             value={formData.provideCleaning}
             onValueChange={(value) => updateFormData("provideCleaning", value)}
           >
-            <SelectTrigger className={errors.provideCleaning ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.provideCleaning ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Select Yes or No" />
             </SelectTrigger>
             <SelectContent>
@@ -253,20 +251,20 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.provideCleaning && (
-            <p className="text-sm text-red-500">{errors.provideCleaning}</p>
+            <p className="text-sm text-error">{errors.provideCleaning}</p>
           )}
         </div>
 
         {/* Do you have pets? */}
         <div className="space-y-2">
           <Label htmlFor="hasPets">
-            Do you have pets? <span className="text-red-500">*</span>
+            Do you have pets?
           </Label>
           <Select
             value={formData.hasPets}
             onValueChange={(value) => updateFormData("hasPets", value)}
           >
-            <SelectTrigger className={errors.hasPets ? "border-red-500" : ""}>
+            <SelectTrigger className={`${errors.hasPets ? "border-error" : ""} w-full`}>
               <SelectValue placeholder="Select Yes or No" />
             </SelectTrigger>
             <SelectContent>
@@ -275,7 +273,7 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
             </SelectContent>
           </Select>
           {errors.hasPets && (
-            <p className="text-sm text-red-500">{errors.hasPets}</p>
+            <p className="text-sm text-error">{errors.hasPets}</p>
           )}
         </div>
       </div>
