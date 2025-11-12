@@ -38,7 +38,7 @@ const WhatClientsSay = () => {
   ];
 
   return (
-    <div className="w-full h-fit px-5 py-10 flex flex-col gap-12 md:px-10 md:py-20 lg:p-30">
+    <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto flex flex-col gap-12">
       {/* Header and controls */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="font-semibold text-[32px] sm:text-[40px]">

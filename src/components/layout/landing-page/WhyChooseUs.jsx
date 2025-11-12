@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="px-4 md:px-10 py-10 flex flex-col gap-10 lg:flex lg:flex-row lg:justify-between lg:p-30 lg:gap-[60px]">
+    <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto flex flex-col gap-10 lg:flex lg:flex-row lg:justify-between lg:gap-[60px]">
       <div
         className="relative bg-cover bg-center w-full h-[400px] md:h-[400px] md:w-[588px] lg:h-[550px] rounded-2xl transition-all duration-500 ease-in-out"
         style={{

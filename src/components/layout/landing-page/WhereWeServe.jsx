@@ -1,10 +1,11 @@
 import React from "react";
-import Map from "@assets/map1.svg";
-import MapLg from "@assets/map.svg";
+// import Map from "@assets/map1.svg";
+// import MapLg from "@assets/map.svg";
+import Map from "@components/layout/about-us/Map.jsx"
 
 const WhereWeServe = () => {
   return (
-    <div className="w-full h-fit px-5 py-10 flex flex-col gap-12 md:px-10 md:py-20 lg:p-30">
+    <div className="xl:pt-24 md:pt-32 py-20 w-[90%] mx-auto flex flex-col gap-12">
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-3 text-center">
           <p className="bg-muted-blue p-1 w-fit rounded-sm font-medium text-sm text-highlight-blue-500 self-center">
@@ -20,9 +21,8 @@ const WhereWeServe = () => {
           </div>
         </div>
         <div>
-          <img src={Map} alt="Map" className="md:hidden" />
-          <img src={MapLg} alt="Map" className="hidden md:flex" />
-          {/* <MapLg /> */}
+      
+          <Map />
         </div>
       </div>
     </div>
