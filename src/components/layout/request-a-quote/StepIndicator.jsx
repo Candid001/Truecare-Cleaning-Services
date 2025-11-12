@@ -1,11 +1,11 @@
 function StepIndicator({currentStep}) {
     return (
-        <div className="space-y-5 w-4/5 mx-auto">
+        <div className="space-y-5 md:w-4/5 mx-auto">
                 <div className="flex items-center w-full">
                     {[
                         {num: 1, label: "Contact Details"},
                         {num: 2, label: "Service Details"},
-                        {num: 3, label: "Scheduling & Extras"},
+                        {num: 3, label: "Scheduling"},
                     ].map((step) => (
                         <div key={step.num} className="flex items-center flex-1">
                             <div className="flex flex-col items-center flex-1">
@@ -37,7 +37,6 @@ function StepIndicator({currentStep}) {
 
             <div className="w-full bg-border-grey h-[3px]">
                 <div className={`h-full bg-btn-primary`} style={{width: `${(currentStep/3)*100}%`}}>
-
                 </div>
             </div>
         </div>

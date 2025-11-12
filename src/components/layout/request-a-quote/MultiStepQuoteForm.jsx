@@ -320,7 +320,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
 
     return (
         <>
-            <div className="bg-blue-tert rounded-lg w-[55%] mx-auto p-5 space-y-10">
+            <div className="bg-blue-tert rounded-lg md:w-4/5 lg:w-[55%] mx-auto p-5 space-y-10">
                 <div className="space-y-5">
                     {/* Step Indicator */}
                     <StepIndicator currentStep={currentStep} />
@@ -338,22 +338,22 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
 
                 {/* Form Step Content */}
                 <div className="space-y-5">
-                    <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling "}</p>
+                    <p className={`font-semibold text-xl`}>{currentStep === 1 ? "Contact Information": currentStep === 2 ? "Service Details": "Scheduling"}</p>
                     {renderStep()}
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center gap-5 justify-between">
                     {currentStep > STEPS.CONTACT ? (
-                        <Button variant={`form`} width={'w-[220px]'} onClick={handleBack} text={currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"} />
+                        <Button variant={`form`} width={'w-1/2 md:w-[220px]'} onClick={handleBack} text={currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"} />
                     ) : (
-                        <Button onClick={() => (window.location.href = "/")}  width={'w-[220px]'} text={" Back to Home"} variant={`form`} />
+                        <Button onClick={() => (window.location.href = "/")}  width={'w-1/2 md:w-[220px]'} text={"Home"} variant={`form`} />
                     )}
 
                     {currentStep < STEPS.REVIEW ? (
-                        <Button variant={`primary`} text={ `Next`}  width={'w-[220px]'} onClick={handleNext}/>
+                        <Button variant={`primary`} text={ `Next`}  width={'w-1/2 md:w-[220px]'} onClick={handleNext}/>
                     ) : (
-                        <Button variant={`primary`} width={'w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit Quote Request"} onClick={handleSubmit} disabled={isSubmitting}/>
+                        <Button variant={`primary`} width={'w-1/2 md:w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit Quote Request"} onClick={handleSubmit} disabled={isSubmitting}/>
                     )}
                 </div>
             </div>
