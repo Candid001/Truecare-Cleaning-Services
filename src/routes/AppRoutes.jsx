@@ -17,20 +17,22 @@ function AppRoutes() {
     return (
         <BrowserRouter>
             <Navbar/>
-            <div className="mt-18">
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="about" element={<AboutUs/>}/>
-                    <Route path="home-and-apartments-cleaning" element={<HomeApartments/>}/>
-                    <Route path="office-and-small-business-cleaning" element={<OfficeAndSMB/>}/>
-                    <Route path="property-realtors-cleaning" element={<PMAndRealtors/>}/>
-                    <Route path="clinics-and-wellness-centers-cleaning" element={<ClinicsAndWellnessCenter/>}/>
-                    <Route path="post-construction-cleaning" element={<ConstructionCleaning/>}/>
-                    <Route path="request-a-quote" element={<RequestAQuote/>}/>
-                    <Route path="contact-us" element={<ContactUs/>}/>
-                </Routes>
+            <div className={`max-w-7xl mx-auto shadow-md`}>
+                <div className="mt-18">
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="about" element={<AboutUs/>}/>
+                        <Route path="home-and-apartments-cleaning" element={<HomeApartments/>}/>
+                        <Route path="office-and-small-business-cleaning" element={<OfficeAndSMB/>}/>
+                        <Route path="property-realtors-cleaning" element={<PMAndRealtors/>}/>
+                        <Route path="clinics-and-wellness-centers-cleaning" element={<ClinicsAndWellnessCenter/>}/>
+                        <Route path="post-construction-cleaning" element={<ConstructionCleaning/>}/>
+                        <Route path="request-a-quote" element={<RequestAQuote/>}/>
+                        <Route path="contact-us" element={<ContactUs/>}/>
+                    </Routes>
+                </div>
+                <Footer/>
             </div>
-            <Footer/>
             <Toaster position="top-center" richColors />
         </BrowserRouter>
     );

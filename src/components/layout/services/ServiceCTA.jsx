@@ -26,7 +26,7 @@ function ServiceCTA({cta, heading, desc, email}) {
                         <p className={`text-center md:text-sm md:w-3/5 mx-auto px-5 md:px-0`}>{desc}</p>
                     </div>
 
-                    <div className={`flex flex-col md:flex-row text-sm justify-center gap-5 px-3 md:px-10 lg:max-w-[95%] xl:max-w-4/5 mx-auto`}>
+                    <div className={`flex flex-col md:flex-row text-sm justify-center gap-5 px-3 md:px-10 lg:max-w-[95%] xl:max-w-[72.5%] mx-auto`}>
                        <a className={`block w-full`} href={`tel:639-385-0823`}>
                            <Button text={`Phone: +1-639-385-0823`} variant={`default`} cta={true}/>
                        </a>
