@@ -24,7 +24,8 @@
     --color-grey: #202326;;
     --color-grey-pri: #565E64;
     --color-grey-tert: #899197;
-
+    --color-blue-muted-pri: #F0F7FF;
+    --color-blue-active: #003D7A
 }
 
 body {

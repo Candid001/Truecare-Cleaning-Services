@@ -6,6 +6,8 @@ import SchedulingExtrasStep from "./steps/SchedulingExtrasStep";
 import ReviewSubmitStep from "./steps/ReviewSubmitStep";
 import SuccessModal from "./SuccessModal";
 import StepIndicator from "@/components/layout/request-a-quote/StepIndicator.jsx";
+import Caution from "@assets/caution.svg?component"
+import Button from "@/components/Button.jsx";
 
 const STEPS = {
     CONTACT: 1,
@@ -323,24 +325,11 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                 <StepIndicator currentStep={currentStep} />
 
                 {/* Privacy Notice */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg">
-                    <div className="flex items-start gap-3">
-                        <svg
-                            className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                            />
-                        </svg>
-                        <p className="text-sm text-blue-800">
-                            We respect your privacy. Your information is only used to prepare your
-                            cleaning quote, never shared or sold.
+                <div className="bg-blue-muted-pri py-2 rounded-sm">
+                    <div className="flex items-center justify-center gap-3">
+                        <Caution />
+                        <p className="text-xs text-btn-primary">
+                            We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
                         </p>
                     </div>
                 </div>
@@ -351,36 +340,15 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                 {/* Navigation Buttons */}
                 <div className="flex items-center justify-between">
                     {currentStep > STEPS.CONTACT ? (
-                        <button
-                            onClick={handleBack}
-                            className="px-6 py-3 text-blue-600 font-medium hover:text-blue-700 transition-colors"
-                        >
-                            {currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"}
-                        </button>
+                        <Button variant={`form`} width={'w-[220px]'} onClick={handleBack} text={currentStep === STEPS.REVIEW ? "Back: Schedule" : "Back"} />
                     ) : (
-                        <button
-                            onClick={() => (window.location.href = "/")}
-                            className="px-6 py-3 text-blue-600 font-medium hover:text-blue-700 transition-colors"
-                        >
-                            Back to Home
-                        </button>
+                        <Button onClick={() => (window.location.href = "/")}  width={'w-[220px]'} text={" Back to Home"} variant={`form`} />
                     )}
 
                     {currentStep < STEPS.REVIEW ? (
-                        <button
-                            onClick={handleNext}
-                            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors"
-                        >
-                            Next
-                        </button>
+                        <Button variant={`primary`} text={ `Next`}  width={'w-[220px]'} onClick={handleNext}/>
                     ) : (
-                        <button
-                            onClick={handleSubmit}
-                            disabled={isSubmitting}
-                            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                            {isSubmitting ? "Submitting..." : "Submit Quote Request"}
-                        </button>
+                        <Button variant={`primary`} width={'w-[220px]'} text={isSubmitting ? "Submitting..." : "Submit Quote Request"} onClick={handleSubmit} disabled={isSubmitting}/>
                     )}
                 </div>
             </div>
