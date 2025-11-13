@@ -35,6 +35,7 @@ const WhatClientsSay = () => {
       text: "I love how easy booking is, and my office always smells fresh. Excellent communication and consistent results!",
       color: "#F5FAFF",
     },
+
   ];
 
   return (

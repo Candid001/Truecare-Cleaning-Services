@@ -31,9 +31,9 @@ function ServiceCTA({cta, heading, desc, email}) {
                            <Button text={`Phone: +1-639-385-0823`} variant={`default`} cta={true}/>
                        </a>
 
-                        <Link to={`/request-a-quote`} className={`md:ml-5 block w-full`}>
+                        <a href={`/request-a-quote`} className={`md:ml-5 block w-full`}>
                             {email ? email: <Button text={`Book My Cleaning`} variant={`secondary`} cta={true}/>}
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

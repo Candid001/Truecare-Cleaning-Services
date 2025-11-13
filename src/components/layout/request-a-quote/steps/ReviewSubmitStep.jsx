@@ -32,7 +32,6 @@ function ReviewSubmitStep({formData, onEdit}) {
                         <ReviewInfo title={"Rooms"} value={formData.rooms + "," + formData.bathrooms}/>
                         <ReviewInfo title={"Frequency"} value={formData.cleaningFrequency}/>
                         <ReviewInfo title={"Cleanliness Level"} value={formData.cleanlinessLevel}/>
-                        <ReviewInfo title={"Supplies Provided"} value={formData.provideCleaning}/>
                         <ReviewInfo title={"Pets"} value={formData.hasPets}/>
                     </div>
                 </div>
