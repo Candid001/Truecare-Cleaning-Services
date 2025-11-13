@@ -1,7 +1,8 @@
 import React from "react";
+import { serviceCta } from "@lib/utils.jsx";
 import ServicesHero from "@components/layout/services/ServicesHero.jsx";
-import { MapPinned, PhoneCall, Mail } from 'lucide-react';
-
+import { MapPinned, PhoneCall, Mail } from "lucide-react";
+import ServiceCTA from "@components/layout/services/ServiceCTA.jsx";
 
 const ContactUs = () => {
   return (
@@ -14,23 +15,39 @@ const ContactUs = () => {
         maxWD={"lg:max-w-[55%] md:max-w-4/5"}
       />
 
-      <div className="py-10">
-        <div className="flex flex-col space-y-6 mx-auto border-b-2 py-6 items-center text-center">
-          <h2 className="font-medium text-2xl text-blue-500 flex gap-2"><MapPinned /> Address:</h2>
-          <p className="text-lgto w-[90%] mx-au">Serving Regina and surrounding areas across Saskatchewan</p>
+      <div className="py-10 ">
+        <div className="md:w-[80%] lg:w-[40%] mx-auto">
+          <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
+            <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
+              <MapPinned /> Address:
+            </h2>
+            <p className="text-lgto w-[90%] mx-au">
+              Serving Regina and surrounding areas across Saskatchewan
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
+            <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
+              <PhoneCall /> Phone:
+            </h2>
+            <p className="text-lgto w-[90%] mx-au">+1-234-567-890</p>
+          </div>
+          <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
+            <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
+              <Mail /> Email:
+            </h2>
+            <p className="text-lgto w-[90%] mx-au">info@truecarecleaning.ca</p>
+          </div>
+          <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
+            <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
+              <MapPinned /> Hours of Operation
+            </h2>
+            <p className="text-lgto w-[90%] mx-au">
+              Monday – Friday: 8:00 AM – 6:00 PM <br />
+              Saturday – Sunday: 9:00 AM – 4:00 PM
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col space-y-6 mx-auto border-b-2 py-6 items-center text-center">
-          <h2 className="font-medium text-2xl text-blue-500 flex gap-2"><PhoneCall /> Phone:</h2>
-          <p className="text-lgto w-[90%] mx-au">+1-234-567-890</p>
-        </div>
-        <div className="flex flex-col space-y-6 mx-auto border-b-2 py-6 items-center text-center">
-          <h2 className="font-medium text-2xl text-blue-500 flex gap-2"><Mail /> Email:</h2>
-          <p className="text-lgto w-[90%] mx-au">info@truecarecleaning.ca</p>
-        </div>
-        <div className="flex flex-col space-y-6 mx-auto border-b-2 py-6 items-center text-center">
-          <h2 className="font-medium text-2xl text-blue-500 flex gap-2"><MapPinned /> Hours of Operation</h2>
-          <p className="text-lgto w-[90%] mx-au">Monday – Friday: 8:00 AM – 6:00 PM <br />Saturday – Sunday: 9:00 AM – 4:00 PM</p>
-        </div>
+        <ServiceCTA {...serviceCta.homeAndApartments} />
       </div>
     </>
   );
