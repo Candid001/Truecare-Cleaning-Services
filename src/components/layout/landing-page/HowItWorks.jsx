@@ -20,14 +20,14 @@ const HowItWorks = () => {
         </div>
       </div>
 
-      <div className="relative h-[300vh] flex flex-col gap-[72px]">
+      <div className="relative h-fit flex flex-col gap-[72px]">
         <div
           className="sticky top-0 w-full h-[380px] rounded-2xl overflow-hidden bg-cover bg-center z-10"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(0,51,102,0.85) 40%, rgba(0,51,102,0) 70%), url(${Hiwi2})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               01<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>
@@ -49,7 +49,7 @@ const HowItWorks = () => {
             backgroundImage: `linear-gradient(to right, rgba(0, 168, 107, 1) 10%, rgba(0, 66, 42, 0) 90%), url(${Hiwi1})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               02<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>
@@ -72,7 +72,7 @@ const HowItWorks = () => {
             backgroundImage: `linear-gradient(to right, rgba(108, 117, 125, 1) 10%, rgba(196, 212, 227, 0) 90%), url(${Hiwi3})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               03<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>
