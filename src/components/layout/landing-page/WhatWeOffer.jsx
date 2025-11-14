@@ -8,7 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const WhatWeOffer = () => {
   return (
-    <div className="w-full h-fit px-5 py-10 md:py-15 md:px-10 lg:p-[120px] font-instrument">
+    <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto">
       <div className="flex flex-col gap-14 md:gap-[72px]">
         <div className="flex flex-col gap-2 text-center md:gap-3">
           <h3 className="font-medium text-sm text-btn-primary bg-[#E6F2FF] p-1 rounded-sm w-fit self-center">

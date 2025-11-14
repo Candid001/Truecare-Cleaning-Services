@@ -35,10 +35,29 @@ const WhatClientsSay = () => {
       text: "I love how easy booking is, and my office always smells fresh. Excellent communication and consistent results!",
       color: "#F5FAFF",
     },
+     {
+      id: 4,
+      name: "Ahmed T. – Winnipeg",
+      text: "Always on time, friendly staff, and spotless results. Highly recommended.",
+      color: "#F5FAFF",
+    },
+    {
+      id: 5,
+      name: "Lisa G. – Edmonton",
+      text: "Their eco-friendly products are a plus. My home smells fresh every time.",
+      color: "#F5FAFF",
+    },
+    {
+      id: 6,
+      name: "Owen R. – Vancouver",
+      text: "Reliable and consistent cleaning quality. Great customer service too.",
+      color: "#F5FAFF",
+    },
+
   ];
 
   return (
-    <div className="w-full h-fit px-5 py-10 flex flex-col gap-12 md:px-10 md:py-20 lg:p-30">
+    <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto flex flex-col gap-12">
       {/* Header and controls */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="font-semibold text-[32px] sm:text-[40px]">

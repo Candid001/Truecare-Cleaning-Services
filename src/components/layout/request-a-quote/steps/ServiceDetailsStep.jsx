@@ -233,27 +233,27 @@ function ServiceDetailsStep({ formData, updateFormData, errors }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Will you provide cleaning supplies? */}
-        <div className="space-y-2">
-          <Label htmlFor="provideCleaning">
-            Will you provide cleaning supplies?
-          </Label>
-          <Select
-            value={formData.provideCleaning}
-            onValueChange={(value) => updateFormData("provideCleaning", value)}
-          >
-            <SelectTrigger className={`${errors.provideCleaning ? "border-error" : ""} w-full`}>
-              <SelectValue placeholder="Select Yes or No" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="yes">Yes</SelectItem>
-              <SelectItem value="no">No</SelectItem>
-            </SelectContent>
-          </Select>
-          {errors.provideCleaning && (
-            <p className="text-sm text-error">{errors.provideCleaning}</p>
-          )}
-        </div>
+        {/*/!* Will you provide cleaning supplies? *!/*/}
+        {/*<div className="space-y-2">*/}
+        {/*  <Label htmlFor="provideCleaning">*/}
+        {/*    Will you provide cleaning supplies?*/}
+        {/*  </Label>*/}
+        {/*  <Select*/}
+        {/*    value={formData.provideCleaning}*/}
+        {/*    onValueChange={(value) => updateFormData("provideCleaning", value)}*/}
+        {/*  >*/}
+        {/*    <SelectTrigger className={`${errors.provideCleaning ? "border-error" : ""} w-full`}>*/}
+        {/*      <SelectValue placeholder="Select Yes or No" />*/}
+        {/*    </SelectTrigger>*/}
+        {/*    <SelectContent>*/}
+        {/*      <SelectItem value="yes">Yes</SelectItem>*/}
+        {/*      <SelectItem value="no">No</SelectItem>*/}
+        {/*    </SelectContent>*/}
+        {/*  </Select>*/}
+        {/*  {errors.provideCleaning && (*/}
+        {/*    <p className="text-sm text-error">{errors.provideCleaning}</p>*/}
+        {/*  )}*/}
+        {/*</div>*/}
 
         {/* Do you have pets? */}
         <div className="space-y-2">

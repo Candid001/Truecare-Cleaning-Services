@@ -91,7 +91,7 @@ const AboutUs = () => {
               </div>
           </div>
 
-          <ServiceCTA {...serviceCta.homeAndApartments}/>
+          <ServiceCTA />
       </>
   )
 }

@@ -5,7 +5,7 @@ import Hiwi3 from "@assets/howitworksimage3.svg";
 
 const HowItWorks = () => {
   return (
-    <div className="w-full h-fit py-10 flex flex-col gap-12 px-5 md:gap-[72px] md:px-10 md:py-20 lg:px-[120px] font-instrument">
+    <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto flex flex-col gap-12">
       <div className="flex flex-col gap-2 lg:w-[626px] self-center">
         <p className="text-btn-primary bg-[#E6F2FF] rounded-sm p-1 w-fit self-center font-medium">
           Simple 3-Step Process
@@ -20,14 +20,14 @@ const HowItWorks = () => {
         </div>
       </div>
 
-      <div className="relative h-[300vh] flex flex-col gap-[72px]">
+      <div className="relative h-fit flex flex-col gap-[72px]">
         <div
           className="sticky top-0 w-full h-[380px] rounded-2xl overflow-hidden bg-cover bg-center z-10"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(0,51,102,0.85) 40%, rgba(0,51,102,0) 70%), url(${Hiwi2})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               01<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>
@@ -49,7 +49,7 @@ const HowItWorks = () => {
             backgroundImage: `linear-gradient(to right, rgba(0, 168, 107, 1) 10%, rgba(0, 66, 42, 0) 90%), url(${Hiwi1})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               02<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>
@@ -72,7 +72,7 @@ const HowItWorks = () => {
             backgroundImage: `linear-gradient(to right, rgba(108, 117, 125, 1) 10%, rgba(196, 212, 227, 0) 90%), url(${Hiwi3})`,
           }}
         >
-          <div className="absolute left-0 top-0 h-full flex flex-col justify-between p-8 text-white">
+          <div className="absolute left-0 top-0 h-fit flex flex-col justify-between p-8 text-white">
             <p className="text-4xl font-bold leading-none">
               03<span className="text-white/60 text-lg font-medium"> /03</span>
             </p>

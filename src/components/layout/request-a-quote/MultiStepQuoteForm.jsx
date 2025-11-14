@@ -40,7 +40,6 @@ function MultiStepQuoteForm() {
         cleaningFrequency: "",
         cleanlinessLevel: "",
         provideSupplies: "",
-        provideCleaning: "",
         hasPets: "",
 
         // Scheduling & Extras
@@ -120,9 +119,6 @@ function MultiStepQuoteForm() {
         if (!formData.provideSupplies) {
             newErrors.provideSupplies = "Please specify if you'll provide supplies";
         }
-        if (!formData.provideCleaning) {
-            newErrors.provideCleaning = "Please specify if you'll provide cleaning supplies";
-        }
         if (!formData.hasPets) {
             newErrors.hasPets = "Please specify if you have pets";
         }
@@ -191,7 +187,6 @@ Bathrooms: ${formData.bathrooms}
 Frequency: ${formData.cleaningFrequency}
 Cleanliness Level: ${formData.cleanlinessLevel}
 Client Provides Supplies: ${formData.provideSupplies}
-Client Provides Cleaning Supplies: ${formData.provideCleaning}
 Has Pets: ${formData.hasPets}
 
 📅 *Schedule*
@@ -203,8 +198,8 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
       `.trim();
 
             // Replace with your Telegram Bot Token and Chat ID
-            const TELEGRAM_BOT_TOKEN = "8255936518:AAEOpIvD2H2-H2RUmzn3bB1KkLKaBw829XM";
-            const TELEGRAM_CHAT_ID = "6487668702";
+            const TELEGRAM_BOT_TOKEN = "8434089958:AAGe-fpQRmBHJCxyEhLNX4Ha3pUPVjT_gdQ";
+            const TELEGRAM_CHAT_ID = "5923800619";
 
             const response = await fetch(
                 `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
@@ -243,6 +238,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                 }
             }
 
+            setIsSubmitting(false)
             setShowSuccessModal(true);
             toast.success("Quote request submitted successfully!");
 
@@ -263,7 +259,6 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                     cleaningFrequency: "",
                     cleanlinessLevel: "",
                     provideSupplies: "",
-                    provideCleaning: "",
                     hasPets: "",
                     preferredDate: "",
                     alternateDate: "",
@@ -273,6 +268,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                 });
                 setCurrentStep(STEPS.CONTACT);
             }, 3000);
+            window.scrollTo(0, 0);
         } catch (error) {
             console.error("Error submitting form:", error);
             toast.error("Failed to submit quote request. Please try again.");
