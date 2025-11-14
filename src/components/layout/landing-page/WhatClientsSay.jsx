@@ -35,6 +35,24 @@ const WhatClientsSay = () => {
       text: "I love how easy booking is, and my office always smells fresh. Excellent communication and consistent results!",
       color: "#F5FAFF",
     },
+     {
+      id: 4,
+      name: "Ahmed T. – Winnipeg",
+      text: "Always on time, friendly staff, and spotless results. Highly recommended.",
+      color: "#F5FAFF",
+    },
+    {
+      id: 5,
+      name: "Lisa G. – Edmonton",
+      text: "Their eco-friendly products are a plus. My home smells fresh every time.",
+      color: "#F5FAFF",
+    },
+    {
+      id: 6,
+      name: "Owen R. – Vancouver",
+      text: "Reliable and consistent cleaning quality. Great customer service too.",
+      color: "#F5FAFF",
+    },
 
   ];
 
