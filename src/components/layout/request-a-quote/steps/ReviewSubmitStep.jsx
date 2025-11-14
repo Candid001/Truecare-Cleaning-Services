@@ -1,4 +1,4 @@
-import Editheader from "../Editheader.jsx";
+import Editheader from "@components/layout/request-a-quote/Editheader.jsx";
 import ReviewInfo from "@/components/layout/request-a-quote/ReviewInfo.jsx";
 
 function ReviewSubmitStep({formData, onEdit}) {
