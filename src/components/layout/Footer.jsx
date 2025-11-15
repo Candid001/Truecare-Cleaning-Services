@@ -47,7 +47,7 @@ const Footer = () => {
 
                         <ul className={`space-y-3`}>
                             <p>Location: Regina, Saskatchewan</p>
-                            <a href="tel:+12345677890">Phone: +1 (234) 567-7890</a>
+                            <a href="tel:+16393850823">Phone: +1 (639) 385-0823</a><br />
                             <a href="mailto:info@truecarecleaningservices.ca">Email: info@truecarecleaningservices.ca </a>
                         </ul>
                     </div>
