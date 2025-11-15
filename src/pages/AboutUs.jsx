@@ -43,7 +43,7 @@ const AboutUs = () => {
                   />
 
                   <AboutUSContent
-                      heading={'Our Story'}
+                      heading={'Our Mission'}
                       description={`
                           Our mission is to deliver professional, high-quality cleaning services that make every
                           space shine and every client feel at ease. We aim to redefine cleaning through genuine care,
@@ -56,7 +56,7 @@ const AboutUs = () => {
                   />
 
                   <AboutUSContent
-                      heading={'Our Story'}
+                      heading={'Our Vision'}
                       description={`
                           Our vision is to become Saskatchewan’s most trusted and preferred cleaning company recognized
                           for reliability, quality, and genuine care. We aspire to set a new standard in cleaning by
@@ -91,7 +91,7 @@ const AboutUs = () => {
               </div>
           </div>
 
-          <ServiceCTA />
+          <ServiceCTA {...serviceCta.aboutUs}/>
       </>
   )
 }

@@ -82,7 +82,7 @@ const WhatClientsSay = () => {
       {/* Scrollable testimonials */}
       <div
         ref={scrollRef}
-        className="flex gap-4 lg:gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
+        className="flex gap-4 lg:gap-6 overflow-x-auto scroll-smooth no-scrollbar"
       >
         {testimonials.map((item) => (
           <div

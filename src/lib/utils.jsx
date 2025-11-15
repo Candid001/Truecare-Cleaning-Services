@@ -212,5 +212,10 @@ export const serviceCta = {
         cta: "Prefer to Talk?",
         heading: "Call or Message Us Anytime",
         desc: "Need a faster response? Reach our friendly support team directly we’re always happy to help you schedule or customize your cleaning plan.",
-    }
+    },
+    aboutUs: {
+        cta: "Experience the TrueCare Touch",
+        heading: "Let’s Make Your Space Shine",
+        desc: "Discover cleaning that goes beyond surface sparkle. Trust our trained team to bring care, quality, and peace of mind to your space.",
+    },
 }

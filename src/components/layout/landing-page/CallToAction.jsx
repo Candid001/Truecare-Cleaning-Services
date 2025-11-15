@@ -5,12 +5,13 @@ import Button from "../../Button.jsx";
 const CallToAction = () => {
   return (
     <div
-      className="py-20 px-auto overflow-hidden bg-cover bg-center lg:flex"
+      className="xl:pt-24 md:pt-32 py-20 w-full overflow-hidden bg-cover bg-center lg:flex"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0, 102, 204, 0.7) 40%, rgba(0, 102, 204, 0.2) 60%), url(${Image})`,
       }}
     >
-      <div className="flex flex-col gap-2 w-[90%] mx-auto lg:align-left md:w-2/3 md:mx-10 lg:w-1/3 lg:mx-30">
+      <div className="w-[90%] mx-auto">
+      <div className="flex flex-col gap-2 lg:align-left md:w-2/3 lg:w-1/3">
         <p className="text-highlight-blue-500 bg-muted-blue p-1 w-fit rounded-sm text-sm">
           Ready for a Cleaner Space?
         </p>
@@ -27,16 +28,17 @@ const CallToAction = () => {
           </div>
           {/* Button div */}
           <div className="flex flex-row gap-3">
-            <Button
-              text="Call Us: +1-234-567-890"
+            <a href="tel:+16393850823" className=""><Button
+              text="Call Us: +1-639-385-0823"
               className="bg-white text-blue-sec text-sm px-4 py-3 rounded-[60px] font-medium"
-            />
-            <Button
+            /></a>
+            <a href="/request-a-quote"> <Button
               text="Request a Quote"
               className="bg-deep-blue text-white text-[12px] sm:text-[15px] px-4 py-3  rounded-[60px] font-medium"
-            />
+            /></a>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

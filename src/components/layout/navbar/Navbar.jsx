@@ -97,10 +97,10 @@ function Navbar() {
                 {/* Button & Mobile nav trigger */}
                 <div className="flex items-center gap-2 text-btn-primary">
                     <div className={`hidden md:block`}>
-                        <Button
+                        <a href="/request-a-quote"><Button
                             text="Request a Quote"
                             variant={`primary`}
-                        />
+                        /></a>
                     </div>
 
                     {isOpen ? <X className="w-10 h-10 lg:hidden" onClick={handleIsOpen}/> :
