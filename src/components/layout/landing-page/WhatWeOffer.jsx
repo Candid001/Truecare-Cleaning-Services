@@ -5,6 +5,7 @@ import Clinics from "@assets/clinics.svg";
 import Property from "@assets/property.svg";
 import Projects from "@assets/projects.svg";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const WhatWeOffer = () => {
   return (
@@ -37,9 +38,11 @@ const WhatWeOffer = () => {
               }}
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3 md:p-6">
+                <Link to="/home-and-apartments-cleaning">
                 <h3 className="flex items-center justify-between font-medium text-2xl">
                   Homes & Apartments <BsArrowRight />
                 </h3>
+                </Link>
               </div>
             </div>
 
@@ -52,9 +55,11 @@ const WhatWeOffer = () => {
               }}
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
+                <Link to="/office-and-small-business-cleaning">
                 <h3 className="flex items-center justify-between font-medium text-2xl">
                   Offices & Small Businesses <BsArrowRight />
                 </h3>
+                </Link>
               </div>
             </div>
 
@@ -67,9 +72,11 @@ const WhatWeOffer = () => {
               }}
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
+                <Link to="/clinics-and-wellness-centers-cleaning">
                 <h3 className="flex items-center justify-between font-medium text-2xl">
                   Clinics & Wellness Centers <BsArrowRight />
                 </h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -84,9 +91,11 @@ const WhatWeOffer = () => {
               }}
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
+                <Link to="/property-realtors-cleaning">
                 <h3 className="flex items-center justify-between font-medium text-2xl">
                   Property Managers & Realtors <BsArrowRight />
                 </h3>
+                </Link>
               </div>
             </div>
             <div
@@ -98,9 +107,11 @@ const WhatWeOffer = () => {
               }}
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
+                <Link to="/post-construction-cleaning">
                 <h3 className="flex items-center justify-between font-medium text-2xl">
                   Post-Construction Projects <BsArrowRight />
                 </h3>
+                </Link>
               </div>
             </div>
           </div>
