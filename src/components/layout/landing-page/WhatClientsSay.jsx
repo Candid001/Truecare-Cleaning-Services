@@ -10,33 +10,33 @@ const WhatClientsSay = () => {
     {
       id: 1,
       name: "Sarah L. – Regina",
-      text: "TrueCare made our home sparkle. The team was professional and punctual."
+      text: "TrueCare made our home sparkle. The team was professional and punctual.",
     },
     {
       id: 2,
       name: "Daniel K. – Moose Jaw",
-      text: "Reliable service and strong cleaning results."
+      text: "Reliable service and strong cleaning results.",
     },
     {
       id: 3,
       name: "Maya R. – White City",
-      text: "Easy booking and consistent freshness."
+      text: "Easy booking and consistent freshness.",
     },
     {
       id: 4,
       name: "Ahmed T. – Winnipeg",
-      text: "On time and spotless results."
+      text: "On time and spotless results.",
     },
     {
       id: 5,
       name: "Lisa G. – Edmonton",
-      text: "Eco friendly products and fresh home."
+      text: "Eco friendly products and fresh home.",
     },
     {
       id: 6,
       name: "Owen R. – Vancouver",
-      text: "Reliable cleaning quality and good service."
-    }
+      text: "Reliable cleaning quality and good service.",
+    },
   ];
 
   const moveActive = (direction) => {
@@ -58,13 +58,12 @@ const WhatClientsSay = () => {
 
     container.scrollTo({
       left: activeIndex * (cardWidth + gap),
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }, [activeIndex]);
 
   return (
     <div className="xl:pt-24 md:pt-32 pt-36 w-[90%] mx-auto flex flex-col gap-12">
-
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="font-semibold text-[32px] sm:text-[40px]">
           What Clients Say
@@ -72,7 +71,11 @@ const WhatClientsSay = () => {
 
         <div className="flex gap-4">
           <button
-            className={`p-3 rounded-full ${activeIndex === 0 ? "bg-[#CCCCCC] text-white" : "bg-[#E6F0FF] text-[#0066CC]"}`}
+            className={`p-3 rounded-full ${
+              activeIndex === 0
+                ? "bg-[#CCCCCC] text-white"
+                : "bg-[#E6F0FF] text-[#0066CC]"
+            }`}
             disabled={activeIndex === 0}
             onClick={() => moveActive("left")}
           >
@@ -80,7 +83,11 @@ const WhatClientsSay = () => {
           </button>
 
           <button
-            className={`p-3 rounded-full ${activeIndex === testimonials.length - 1 ? "bg-[#CCCCCC] text-white" : "bg-[#0066CC] text-white"}`}
+            className={`p-3 rounded-full ${
+              activeIndex === testimonials.length - 1
+                ? "bg-[#CCCCCC] text-white"
+                : "bg-[#0066CC] text-white"
+            }`}
             disabled={activeIndex === testimonials.length - 1}
             onClick={() => moveActive("right")}
           >
