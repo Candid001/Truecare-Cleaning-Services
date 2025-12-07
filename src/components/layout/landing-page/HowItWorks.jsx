@@ -13,9 +13,8 @@ const HowItWorks = () => {
         <div className="flex flex-col gap-6 text-center">
           <h2 className="font-semibold text-[40px]">How it Works</h2>
           <p>
-            We make cleaning simple and stress-free request a quote, choose your
-            schedule, and our professional team delivers spotless results every
-            single time.
+            Cleaning shouldn’t be stressful. With TrueCare, it’s as easy as
+            booking, scheduling, and relaxing while we take care of the rest.
           </p>
         </div>
       </div>
@@ -37,7 +36,7 @@ const HowItWorks = () => {
 
               <p className="text-sm text-white/80 mt-3 leading-relaxed max-w-xs">
                 Tell us what you need through our online form or a quick call.
-                We’ll provide a clear, upfront estimate no surprises.
+                We’ll send a clear, upfront estimate; no surprises.
               </p>
             </div>
           </div>
@@ -58,9 +57,8 @@ const HowItWorks = () => {
               <h3 className="text-2xl font-semibold mt-6">We Clean</h3>
 
               <p className="text-sm text-white/80 mt-3 leading-relaxed max-w-xs">
-                Our professional cleaners arrive on time with all supplies,
-                following your preferences to deliver spotless, consistent
-                results every time.
+                Our professional cleaners arrive on time with all supplies and
+                follow your preferences for consistent, high-quality results.
               </p>
             </div>
           </div>
@@ -81,8 +79,8 @@ const HowItWorks = () => {
               <h3 className="text-2xl font-semibold mt-6">You Relax</h3>
 
               <p className="text-sm text-white/80 mt-3 leading-relaxed max-w-xs">
-                Enjoy your clean, fresh space knowing everything was handled
-                with genuine care and TrueCare’s commitment to quality.
+                Enjoy a fresh, spotless space knowing everything was done with
+                TrueCare’s commitment to quality.
               </p>
             </div>
           </div>

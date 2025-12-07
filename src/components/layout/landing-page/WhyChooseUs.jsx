@@ -12,22 +12,22 @@ const WhyChooseUs = () => {
     {
       id: 1,
       title: "Consistent Quality",
-      text: "We follow detailed cleaning checklists to ensure every room meets TrueCare’s standard spotless, fresh, and flawless.",
+      text: "Every visit follows a detailed checklist to ensure your space is spotless, fresh, and flawlessly cleaned.",
     },
     {
       id: 2,
       title: "Clear Communication",
-      text: "From booking to feedback, our team keeps you informed, responsive, and fully confident in every cleaning session.",
+      text: "From booking to follow-up, we keep you informed and make the process simple and stress-free.",
     },
     {
       id: 3,
       title: "Transparent Pricing",
-      text: "No hidden fees or confusing packages just honest, upfront rates tailored to your cleaning needs and frequency.",
+      text: "No hidden fees or confusing bundles; just honest, upfront pricing tailored to your needs.",
     },
     {
       id: 4,
       title: "Customer-Focused Care",
-      text: "We treat your space like our own, with attention to detail that builds trust and long-term relationships.",
+      text: "We treat your space with the same attention and respect as our own, building trust with every clean.",
     },
   ];
 
@@ -65,9 +65,9 @@ const WhyChooseUs = () => {
         <div className="flex flex-col gap-6">
           <h1 className="font-semibold text-[40px]">Why Choose Us</h1>
           <p>
-            We’re not just cleaners we’re trusted partners committed to reliable
-            service, eco-friendly products, and spotless results that make every
-            client’s space shine.
+            We’re more than a cleaning company, we’re dependable partners
+            committed to exceptional service, eco-friendly solutions, and
+            results that truly shine.
           </p>
         </div>
 

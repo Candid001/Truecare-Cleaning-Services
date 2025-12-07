@@ -16,9 +16,10 @@ const WhoWeAre = () => {
               Cleaning with TrueCare
             </h1>
             <p className="lg:w-[720px] self-center">
-              We’re a reliable cleaning company in Saskatchewan, providing
-              spotless homes and workspaces with eco-friendly products, trusted
-              professionals, and consistent, high-quality service.
+              TrueCare is a trusted cleaning company serving homes and
+              workplaces across Saskatchewan. We combine eco-friendly products,
+              trained professionals, and a commitment to quality to deliver a
+              spotless space you can feel good about.
             </p>
           </div>
         </div>
@@ -32,9 +33,8 @@ const WhoWeAre = () => {
                 Experienced Professionals
               </h2>
               <p>
-                Our trained cleaners deliver consistent, detailed results using
-                proven methods that ensure every surface shines flawlessly
-                clean.
+                Our trained cleaners deliver detailed, consistent results using
+                proven methods that leave every surface clean and flawless.
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const WhoWeAre = () => {
               <h2 className="font-medium text-2xl">Eco-Friendly Products</h2>
               <p>
                 We use biodegradable, non-toxic cleaning solutions that are safe
-                for your family, pets, and the environment.
+                for your family, your pets, and the environment.
               </p>
             </div>
           </div>
@@ -55,8 +55,8 @@ const WhoWeAre = () => {
             <div className="flex flex-col gap-1">
               <h2 className="font-medium text-2xl">On-Time, Every Time</h2>
               <p>
-                We value your schedule and guarantee punctual, reliable cleaning
-                services that keep your space shining exactly when you need it.
+                We respect your schedule and arrive exactly when you need us, no
+                delays, no excuses.
               </p>
             </div>
           </div>

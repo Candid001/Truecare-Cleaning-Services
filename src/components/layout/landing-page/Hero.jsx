@@ -20,25 +20,35 @@ const Hero = () => {
           <div className="flex justify-center items-center gap-2">
             <Ficon />
             <p className="text-sm md:text-base">
-              Fully insured & bonded for your peace of mind.
+              Fully insured and bonded so you can relax knowing your space is in
+              trusted hands.
             </p>
           </div>
 
           <h1 className="font-semibold text-4xl md:text-[57px] lg:text-[61px] leading-[120%] md:w-4/5 lg:w-[70%] xl:max-w-3/5 mx-auto">
-            Every Space Deserves the TrueCare Touch
+            Bring Your Space to Life with the TrueCare Touch
           </h1>
         </div>
 
         <p className="font-medium md:max-w-1/2 mx-auto">
-          Experience spotless cleaning for homes, offices, and rentals across
-          Saskatchewan. Dependable, eco-friendly, and handled with true care.
+          Professional cleaning for homes, offices, and rentals across
+          Saskatchewan. Eco-friendly products, reliable cleaners, and results
+          that make your space shine every time.
         </p>
       </div>
 
       {/* Buttons */}
       <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:w-4/5 lg:w-1/2 mx-auto px-10 md:px-0">
-        <a href="tel:+16393850823" className="w-full"><Button text="Call Us: +1-639-385-0823" variant={`default`} cta={true} /></a>
-        <a href="/request-a-quote" className="w-full"><Button text="Request a Quote" variant={`tertiary`} cta={true} /></a>
+        <a href="tel:+16393850823" className="w-full">
+          <Button
+            text="Call Us: +1-639-385-0823"
+            variant={`default`}
+            cta={true}
+          />
+        </a>
+        <a href="/request-a-quote" className="w-full">
+          <Button text="Request a Quote" variant={`tertiary`} cta={true} />
+        </a>
       </div>
 
       <div
