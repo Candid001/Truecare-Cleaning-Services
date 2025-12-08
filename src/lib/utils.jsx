@@ -216,6 +216,6 @@ export const serviceCta = {
     aboutUs: {
         cta: "Experience the TrueCare Touch",
         heading: "Let’s Make Your Space Shine",
-        desc: "Discover cleaning that goes beyond surface sparkle. Trust our trained team to bring care, quality, and peace of mind to your space.",
+        desc: "Discover cleaning that goes beyond surface sparkle. Our trained team brings care, quality, and peace of mind to every space we enter.",
     },
 }
