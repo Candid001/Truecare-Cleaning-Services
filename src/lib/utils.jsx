@@ -168,22 +168,22 @@ export const services = [
     },
     {
         name: "Office & Small Business Cleaning",
-        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        desc: "Keep your workspace fresh, organized, and productive with flexible cleaning options including after-hours service.",
         link: "/office-and-small-business-cleaning"
     },
     {
         name: "Property Realtors Cleaning",
-        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        desc: "Create a great first impression for showings, open houses, or new tenants with spotless, move-in-ready spaces.",
         link: "/property-realtors-cleaning"
     },
     {
         name: "Clinic & Wellness Center Cleaning",
-        desc: "Maintain a sanitary, professional environment with cleaning designed for health and wellness spaces.",
+        desc: "Maintain a sanitary, professional environment with cleaning designed for health and wellness facilities.",
         link: "/clinics-and-wellness-centers-cleaning"
     },
     {
         name: "Post-Construction Cleaning",
-        desc: "From dust to debris, we make new builds move-in ready with precision and care.",
+        desc: "From dust to debris, we make new builds and renovations move-in ready with detailed, careful cleaning.",
         link: "/post-construction-cleaning"
     },
 ]
