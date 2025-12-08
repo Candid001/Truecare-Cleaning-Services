@@ -10,32 +10,32 @@ const WhatClientsSay = () => {
     {
       id: 1,
       name: "Sarah L. – Regina",
-      text: "TrueCare made our home sparkle. The team was professional and punctual.",
+      text: "As a mom of two, I barely have time to keep up with housework. TrueCare stepped in and made our home feel lighter and fresher. They’re always on time and the results speak for themselves.",
     },
     {
       id: 2,
       name: "Daniel K. – Moose Jaw",
-      text: "Reliable service and strong cleaning results.",
+      text: "I run a small office, and consistency matters. TrueCare has been reliable from day one. The team communicates well and leaves the office spotless every time.",
     },
     {
       id: 3,
       name: "Maya R. – White City",
-      text: "Easy booking and consistent freshness.",
+      text: "Booking was easy, and the cleaning quality stays the same no matter who comes. My home always feels fresh after they leave.",
     },
     {
       id: 4,
       name: "Ahmed T. – Winnipeg",
-      text: "On time and spotless results.",
+      text: "Great service. They arrive when they say they will and deliver a thorough, professional clean.",
     },
     {
       id: 5,
       name: "Lisa G. – Edmonton",
-      text: "Eco friendly products and fresh home.",
+      text: "I love that their products are eco-friendly. My home feels clean without the harsh chemical smell.",
     },
     {
       id: 6,
       name: "Owen R. – Vancouver",
-      text: "Reliable cleaning quality and good service.",
+      text: "Good service, reliable staff, and great attention to detail. Highly recommend.",
     },
   ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 // import Map from "@assets/map1.svg";
 // import MapLg from "@assets/map.svg";
-import Map from "@components/layout/about-us/Map.jsx"
+import Map from "@components/layout/about-us/Map.jsx";
 
 const WhereWeServe = () => {
   return (
@@ -15,13 +15,12 @@ const WhereWeServe = () => {
             <h1 className="font-semibold text-[40px] ">Where We Serve</h1>
             <p className="lg:w-[720px] self-center">
               Proudly serving homes, offices, and properties across Regina and
-              nearby Saskatchewan communities delivering dependable cleaning
-              wherever true care is needed most.
+              surrounding Saskatchewan communities delivering dependable
+              cleaning wherever true care is needed most.
             </p>
           </div>
         </div>
         <div>
-      
           <Map />
         </div>
       </div>

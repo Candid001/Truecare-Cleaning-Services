@@ -21,8 +21,8 @@ const WhatWeOffer = () => {
             </h1>
             <p>
               We provide customized cleaning solutions for homes, offices, and
-              commercial spaces designed to fit your schedule and maintain
-              spotless, healthy environments.
+              commercial spaces, all designed to fit your schedule and maintain
+              a healthy, spotless environment.
             </p>
           </div>
         </div>
@@ -39,9 +39,9 @@ const WhatWeOffer = () => {
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3 md:p-6">
                 <Link to="/home-and-apartments-cleaning">
-                <h3 className="flex items-center justify-between font-medium text-2xl">
-                  Homes & Apartments <BsArrowRight />
-                </h3>
+                  <h3 className="flex items-center justify-between font-medium text-2xl">
+                    Homes & Apartments <BsArrowRight />
+                  </h3>
                 </Link>
               </div>
             </div>
@@ -56,9 +56,9 @@ const WhatWeOffer = () => {
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
                 <Link to="/office-and-small-business-cleaning">
-                <h3 className="flex items-center justify-between font-medium text-2xl">
-                  Offices & Small Businesses <BsArrowRight />
-                </h3>
+                  <h3 className="flex items-center justify-between font-medium text-2xl">
+                    Offices & Small Businesses <BsArrowRight />
+                  </h3>
                 </Link>
               </div>
             </div>
@@ -73,9 +73,9 @@ const WhatWeOffer = () => {
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
                 <Link to="/clinics-and-wellness-centers-cleaning">
-                <h3 className="flex items-center justify-between font-medium text-2xl">
-                  Clinics & Wellness Centers <BsArrowRight />
-                </h3>
+                  <h3 className="flex items-center justify-between font-medium text-2xl">
+                    Clinics & Wellness Centers <BsArrowRight />
+                  </h3>
                 </Link>
               </div>
             </div>
@@ -92,9 +92,9 @@ const WhatWeOffer = () => {
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
                 <Link to="/property-realtors-cleaning">
-                <h3 className="flex items-center justify-between font-medium text-2xl">
-                  Property Managers & Realtors <BsArrowRight />
-                </h3>
+                  <h3 className="flex items-center justify-between font-medium text-2xl">
+                    Property Managers & Realtors <BsArrowRight />
+                  </h3>
                 </Link>
               </div>
             </div>
@@ -108,9 +108,9 @@ const WhatWeOffer = () => {
             >
               <div className="absolute bottom-4 left-0 right-0 text-white py-6 px-3">
                 <Link to="/post-construction-cleaning">
-                <h3 className="flex items-center justify-between font-medium text-2xl">
-                  Post-Construction Projects <BsArrowRight />
-                </h3>
+                  <h3 className="flex items-center justify-between font-medium text-2xl">
+                    Post-Construction Projects <BsArrowRight />
+                  </h3>
                 </Link>
               </div>
             </div>

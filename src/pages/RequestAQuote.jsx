@@ -11,8 +11,7 @@ function RequestAQuote (){
             <ServicesHero
                 nav={'Request A Quote'}
                 heading={'Quick, Simple, and Transparent'}
-                desc={`At TrueCare Cleaning Services, requesting a quote is easy.
-                 No hidden fees, no pressure  just honest pricing and professional service designed around your schedule and space.`
+                desc={`At TrueCare Cleaning Services, getting a quote shouldn’t feel complicated. We keep the process straightforward with no hidden fees, no pressure, just honest pricing tailored to your home or business.`
                 }
                 maxWH={'lg:max-w-1/2 md:max-w-3/5'}
                 maxWD={'lg:max-w-[55%] md:max-w-[70%]'}

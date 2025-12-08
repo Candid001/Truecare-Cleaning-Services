@@ -11,15 +11,12 @@ function OfficeAndSMB() {
             <ServicesHero
                 nav={'Office & Small Business Cleaning'}
                 heading={'Keep Your Workplace Clean and Productive'}
-                desc={'Create a spotless, welcoming workspace with reliable cleaning that fits your business hours — because a clean office means happier staff and better first impressions.'}
+                desc={'Give your team a fresh, organized workspace every day. We provide reliable cleaning that fits your business hours, because a clean office supports better focus, better impressions, and a better workday.'}
                 maxWH={'lg:max-w-1/2 md:max-w-3/5'}
                 maxWD={'lg:max-w-[55%] md:max-w-[70%]'}
             />
             <ServicesOverview
-                desc={`A clean workplace makes a powerful statement. TrueCare Cleaning Services helps offices
-                 and small businesses across Saskatchewan maintain a spotless environment that supports productivity
-                 and professionalism.Our flexible scheduling means we work after hours or on weekends to avoid disrupting
-                  your team. From daily maintenance to deep cleaning, we tailor every plan to your business needs.`}
+                desc={`A clean workplace does more than look good, it sets the tone for the entire day. At TrueCare Cleaning Services, we help offices and small businesses across Saskatchewan maintain spaces that feel professional, comfortable, and ready for work. We understand that businesses run on tight schedules, so our team works after hours, on weekends, or whenever it’s most convenient for you. Whether you need routine cleaning or occasional deep cleaning, we customize every plan to match your workflow, your space, and your priorities.`}
                 images={servicesImages.officeAndSMB}
                 services={servicesIncluded.officeAndSMB}
                 why={serviceWhyChooseUS.officeAndSMB}

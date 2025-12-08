@@ -77,20 +77,20 @@ export const servicesImages = {
 
 export const servicesIncluded = {
     homeAndApartments: [
-        "General dusting and surface wipe-downs",
+        "General dusting and surface cleaning",
         "Vacuuming and mopping of all floors",
-        "Kitchen cleaning and appliance care",
+        "Kitchen cleaning including appliance",
         "Bathroom sanitization and deodorizing",
         "Window and mirror polishing",
-        "Optional deep cleaning or add-on requests",
+        "Optional deep cleaning or add-on services",
     ],
     officeAndSMB: [
-        "Daily or weekly cleaning schedules",
-        "Dusting desks, fixtures, and electronics",
-        "Floor mopping and carpet vacuuming",
-        "Restroom sanitation and supply restock",
-        "Trash collection and recycling",
-        "Kitchen and break area cleaning"
+        "Daily, weekly, or bi-weekly cleaning schedules",
+        "Dusting of desks, surfaces, and office electronics",
+        "Vacuuming carpets and mopping hard floors",
+        "Restroom cleaning, sanitizing, and supply restock",
+        "Trash removal and recycling",
+        "⦁	Kitchen, lunchroom, and break area cleaning"
     ],
     propertyRealtors: [
         "Move-in & move-out deep cleaning",
@@ -99,63 +99,64 @@ export const servicesIncluded = {
         "Bathroom and kitchen sanitization",
         "Wall and baseboard dusting",
         "Window and glass cleaning",
-        "Debris removal and final touches"
+        "Light debris removal and final touches"
     ],
     clinicsAndWellnessCenter: [
-        "Move-in & move-out deep cleaning",
-        "Appliance and fixture cleaning",
-        "Floor vacuuming and mopping",
-        "Bathroom and kitchen sanitization",
-        "Wall and baseboard dusting",
-        "Window and glass cleaning",
-        "Debris removal and final touches"
+        "Thorough disinfection of high-touch areas",
+        "Sanitization of treatment rooms, waiting areas, and common spaces",
+        "Floor cleaning (vacuuming, sweeping, and mopping)",
+        "Restroom cleaning, sanitizing, and supply restocking",
+        "Countertops, sinks, and fixtures wiped and disinfected",
+        "Waste removal and proper disposal",
+        "Light dusting of furniture, shelves, and equipment",
+        "Optional deep cleaning add-ons for periodic maintenance"
     ],
     constructionCleaning: [
-        "Dust removal from walls, ceilings, and fixtures",
-        "Floor vacuuming, mopping, and polishing",
-        "Window and glass cleaning (inside & out)",
-        "Cabinet, countertop, and appliance wipe-down",
-        "Paint, adhesive, and debris removal",
-        "Bathroom and kitchen deep cleaning",
-        "Final inspection to ensure spotless delivery"
+        "Thorough dust removal from walls, ceilings, vents, and fixtures",
+        "Vacuuming, mopping, and polishing all floors",
+        "Interior and exterior window cleaning",
+        "Wipe-down of cabinets, countertops, and appliances",
+        "Removal of paint splatter, adhesive residue, and construction debris",
+        "Deep cleaning of kitchens and bathrooms",
+        "Final walk-through to ensure the space is flawless and ready to use"
     ]
 }
 
 export const serviceWhyChooseUS = {
     homeAndApartments: [
-        "Reliable and background-checked cleaners",
-        "Eco-friendly products safe for family and pets",
-        "Flexible scheduling that fits your routine",
-        "Affordable, transparent pricing",
+        "Trusted, background-checked cleaners",
+        "Eco-friendly products safe for kids and pets",
+        "Flexible scheduling to fit your routine",
+        "Honest, transparent pricing",
         "Satisfaction guaranteed every visit"
     ],
     officeAndSMB: [
-        "Flexible after-hours service to fit your workday",
-        "Professional, background-checked cleaning team",
-        "Eco-friendly and safe cleaning products",
-        "Customized plans for all business sizes",
-        "Satisfaction guaranteed every single time"
+        "After-hours and weekend cleaning tailored to your schedule",
+        "Professional cleaners who are trained and background-checked",
+        "Eco-friendly products that are safe for your staff and workspace",
+        "Custom cleaning plans for businesses of all sizes",
+        "Consistent, dependable service every single visit"
     ],
     propertyRealtors: [
-        "Fast turnaround perfect for tight move-out schedules",
-        "Professional team experienced with rental properties",
-        "Detail-oriented cleaning that helps listings stand out",
-        "Reliable service trusted by property managers across Saskatchewan",
-        "Fully insured, bonded, and satisfaction guaranteed"
+        "Fast turnaround which is perfect for tight move-out timelines",
+        "Experienced team familiar with rental property standards",
+        "Detail-focused cleaning that helps listings stand out",
+        "Trusted by property managers across Saskatchewan",
+        "Fully insured, bonded, and committed to your satisfaction"
     ],
     clinicsAndWellnessCenter: [
-        "Fast turnaround perfect for tight move-out schedules",
-        "Professional team experienced with rental properties",
-        "Detail-oriented cleaning that helps listings stand out",
-        "Reliable service trusted by property managers across Saskatchewan",
-        "Fully insured, bonded, and satisfaction guaranteed"
+        "Trained team experienced in medical and wellness environments",
+        "Strict hygiene practices that meet industry standards",
+        "Eco-friendly and safe cleaning products",
+        "Flexible scheduling to avoid disruption to your clients",
+        "Reliable, insured, and detail-focused"
     ],
     constructionCleaning: [
-        "Trained team experienced with post-construction cleaning",
-        "Professional-grade tools for dust and debris removal",
+        "Skilled team experienced in post-construction and renovation cleaning",
+        "Professional tools designed for fine dust and heavy debris",
         "Eco-friendly products safe for new finishes and materials",
-        "Flexible scheduling to meet project deadlines",
-        "Fully insured, bonded, and satisfaction guaranteed"
+        "Flexible scheduling to match your project timeline",
+        "Fully insured, bonded, and committed to complete satisfaction"
     ]
 }
 
@@ -167,22 +168,22 @@ export const services = [
     },
     {
         name: "Office & Small Business Cleaning",
-        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        desc: "Keep your workspace fresh, organized, and productive with flexible cleaning options including after-hours service.",
         link: "/office-and-small-business-cleaning"
     },
     {
         name: "Property Realtors Cleaning",
-        desc: "Keep your workspace spotless and productive with flexible, after-hours cleaning tailored to your schedule and needs.",
+        desc: "Create a great first impression for showings, open houses, or new tenants with spotless, move-in-ready spaces.",
         link: "/property-realtors-cleaning"
     },
     {
         name: "Clinic & Wellness Center Cleaning",
-        desc: "Maintain a sanitary, professional environment with cleaning designed for health and wellness spaces.",
+        desc: "Maintain a sanitary, professional environment with cleaning designed for health and wellness facilities.",
         link: "/clinics-and-wellness-centers-cleaning"
     },
     {
         name: "Post-Construction Cleaning",
-        desc: "From dust to debris, we make new builds move-in ready with precision and care.",
+        desc: "From dust to debris, we make new builds and renovations move-in ready with detailed, careful cleaning.",
         link: "/post-construction-cleaning"
     },
 ]
@@ -191,7 +192,7 @@ export const serviceCta = {
     homeAndApartments: {
         cta: "Ready for a Cleaner Home?",
         heading: "Book Your TrueCare Cleaning Today",
-        desc: "Reclaim your weekends and relax — our professional home cleaning team is ready to bring true care and freshness right to your doorstep."
+        desc: "Reclaim your time, relax, and leave the cleaning to us. Our home cleaning team is ready to bring true care, freshness, and comfort straight to your door."
     },
     propertyRealtors: {
         cta: "Reliable Turnover Cleaning Partner",
@@ -216,6 +217,6 @@ export const serviceCta = {
     aboutUs: {
         cta: "Experience the TrueCare Touch",
         heading: "Let’s Make Your Space Shine",
-        desc: "Discover cleaning that goes beyond surface sparkle. Trust our trained team to bring care, quality, and peace of mind to your space.",
+        desc: "Discover cleaning that goes beyond surface sparkle. Our trained team brings care, quality, and peace of mind to every space we enter.",
     },
 }
