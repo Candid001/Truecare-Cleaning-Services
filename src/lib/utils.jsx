@@ -192,7 +192,7 @@ export const serviceCta = {
     homeAndApartments: {
         cta: "Ready for a Cleaner Home?",
         heading: "Book Your TrueCare Cleaning Today",
-        desc: "Reclaim your weekends and relax — our professional home cleaning team is ready to bring true care and freshness right to your doorstep."
+        desc: "Reclaim your time, relax, and leave the cleaning to us. Our home cleaning team is ready to bring true care, freshness, and comfort straight to your door."
     },
     propertyRealtors: {
         cta: "Reliable Turnover Cleaning Partner",

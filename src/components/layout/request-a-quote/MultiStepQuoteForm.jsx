@@ -340,7 +340,7 @@ ${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNote
                         <div className="flex items-center justify-center gap-3">
                             <Caution className={cn("hidden md:block")}/>
                             <p className="text-xs text-btn-primary">
-                                We respect your privacy. Your information is only used to prepare your cleaning quote, never shared or sold.
+                                We value your privacy. Your information is used only to create your cleaning quote and will never be shared or sold.
                             </p>
                         </div>
                     </div>
