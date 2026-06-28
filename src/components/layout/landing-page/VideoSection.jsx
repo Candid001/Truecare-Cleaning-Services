@@ -87,6 +87,10 @@ const VideoSection = () => {
           ref={videoRef}
           src="/truecare-reel.mp4"
           playsInline
+          webkit-playsinline="true"
+          x5-playsinline="true"
+          disablePictureInPicture
+          controlsList="nofullscreen nodownload"
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onEnded={handleEnded}
