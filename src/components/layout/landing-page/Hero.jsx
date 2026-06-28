@@ -49,6 +49,9 @@ const Hero = () => {
         <a href="/request-a-quote" className="w-full">
           <Button text="Request a Quote" variant={`tertiary`} cta={true} />
         </a>
+        <a href="https://truecarecleaningservices.setmore.com" target="_blank" rel="noopener noreferrer" className="w-full">
+          <Button text="Book Now" variant={`tertiary`} cta={true} />
+        </a>
       </div>
 
       <div

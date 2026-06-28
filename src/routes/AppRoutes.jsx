@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { createPortal } from "react-dom";
 import { ThreeDots } from "react-loader-spinner";
 import Navbar from "../components/layout/navbar/Navbar.jsx";
 import Footer from "../components/layout/Footer";
 import { Toaster } from "sonner";
+import TrueCareChat from "../components/TrueCareChat.jsx";
+import DiscountPopup from "../components/DiscountPopup.jsx";
 
 const Home = lazy(() => import("../pages/Home"));
 const AboutUs = lazy(() => import("../pages/AboutUs"));
@@ -18,6 +21,7 @@ const ConstructionCleaning = lazy(() =>
   import("@/pages/ConstructionCleaning.jsx")
 );
 const RequestAQuote = lazy(() => import("@/pages/RequestAQuote.jsx"));
+
 
 function AppRoutes() {
   return (
@@ -58,6 +62,7 @@ function AppRoutes() {
               />
               <Route path="request-a-quote" element={<RequestAQuote />} />
               <Route path="contact-us" element={<ContactUs />} />
+
             </Routes>
           </div>
 
@@ -66,6 +71,8 @@ function AppRoutes() {
       </Suspense>
 
       <Toaster position="top-center" richColors />
+      {createPortal(<TrueCareChat />, document.body)}
+      {createPortal(<DiscountPopup />, document.body)}
     </BrowserRouter>
   );
 }

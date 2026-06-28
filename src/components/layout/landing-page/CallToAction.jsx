@@ -27,7 +27,7 @@ const CallToAction = () => {
               </p>
             </div>
             {/* Button div */}
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row flex-wrap gap-3">
               <a href="tel:+16393850823" className="">
                 <Button
                   text="Call Us: +1-639-385-0823"
@@ -35,10 +35,15 @@ const CallToAction = () => {
                 />
               </a>
               <a href="/request-a-quote">
-                {" "}
                 <Button
                   text="Request a Quote"
-                  className="bg-deep-blue text-white text-[12px] sm:text-[15px] px-4 py-3  rounded-[60px] font-medium"
+                  className="bg-deep-blue text-white text-[12px] sm:text-[15px] px-4 py-3 rounded-[60px] font-medium"
+                />
+              </a>
+              <a href="https://truecarecleaningservices.setmore.com" target="_blank" rel="noopener noreferrer">
+                <Button
+                  text="Book Now"
+                  className="bg-white text-blue-sec text-sm px-4 py-3 rounded-[60px] font-medium"
                 />
               </a>
             </div>

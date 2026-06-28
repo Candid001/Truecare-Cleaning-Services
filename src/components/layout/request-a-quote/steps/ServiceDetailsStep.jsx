@@ -27,20 +27,19 @@ const SERVICE_TYPES = [
   "Window Cleaning",
 ];
 
-const ROOM_OPTIONS = [
-  "1 Bedroom",
-  "2 Bedrooms",
-  "3 Bedrooms",
-  "4 Bedrooms",
-  "5+ Bedrooms",
-];
+const ROOM_OPTIONS = Array.from({ length: 30 }, (_, i) => i + 1).map(
+  (n) => n === 30 ? "30+ Bedrooms" : n === 1 ? "1 Bedroom" : `${n} Bedrooms`
+);
 
-const BATHROOM_OPTIONS = [
-  "1 Bathroom",
-  "2 Bathrooms",
-  "3 Bathrooms",
-  "4+ Bathrooms",
-];
+const BATHROOM_OPTIONS = (() => {
+  const opts = [];
+  for (let i = 0.5; i <= 13.5; i += 0.5) {
+    const n = Math.round(i * 10) / 10;
+    opts.push(n === 1 ? "1 Bathroom" : `${n} Bathrooms`);
+  }
+  opts.push("14+ Bathrooms");
+  return opts;
+})();
 
 const CLEANLINESS_LEVELS = [
   { value: "light", label: "Light - Regular maintenance" },

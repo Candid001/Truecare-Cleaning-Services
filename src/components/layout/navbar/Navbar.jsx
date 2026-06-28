@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from "react";
+import {useState, useRef, useEffect, useCallback} from "react";
 import {Link} from "react-router-dom";
 import Button from "../../Button.jsx";
 //TODO: Use icon like this, check line 23
@@ -7,8 +7,27 @@ import {Menu, X} from "lucide-react";
 import NavbarLink from "./NavbarLink.jsx";
 import NavDropdown from "@/components/layout/navbar/NavDropdown.jsx";
 import {navItems} from "@/lib/utils.jsx";
+import AdminModal from "@/components/AdminModal.jsx";
 
 function Navbar() {
+    // Admin modal — 5 logo clicks to open
+    const [adminOpen, setAdminOpen] = useState(false);
+    const logoClickCount = useRef(0);
+    const logoClickTimer = useRef(null);
+
+    const handleLogoClick = useCallback(() => {
+        logoClickCount.current += 1;
+        if (logoClickTimer.current) clearTimeout(logoClickTimer.current);
+        if (logoClickCount.current >= 5) {
+            logoClickCount.current = 0;
+            setAdminOpen(true);
+        } else {
+            logoClickTimer.current = setTimeout(() => {
+                logoClickCount.current = 0;
+            }, 2000);
+        }
+    }, []);
+
     // Dropdown-related code
     const dropdownRef = useRef(null);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -46,9 +65,10 @@ function Navbar() {
     return (
         <nav className="fixed top-0 left-0 max-w-full mx-auto right-0 z-50 bg-white py-4 shadow-xs border-b border-blue-100">
             <div className="flex justify-between items-center w-[90%] mx-auto">
-                <Link to="/">
+                <Link to="/" onClick={handleLogoClick} style={{ userSelect: "none" }}>
                     <Logo/>
                 </Link>
+                <AdminModal open={adminOpen} onClose={() => setAdminOpen(false)} />
 
                 {/* lg Screen */}
                 <div className="hidden lg:flex justify-center gap-7">
@@ -96,7 +116,13 @@ function Navbar() {
 
                 {/* Button & Mobile nav trigger */}
                 <div className="flex items-center gap-2 text-btn-primary">
-                    <div className={`hidden md:block`}>
+                    <div className={`hidden md:flex items-center gap-2`}>
+                        <a href="https://truecarecleaningservices.setmore.com" target="_blank" rel="noopener noreferrer">
+                            <Button
+                                text="Book Now"
+                                variant={`primary`}
+                            />
+                        </a>
                         <a href="/request-a-quote"><Button
                             text="Request a Quote"
                             variant={`primary`}
