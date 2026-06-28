@@ -90,7 +90,7 @@ const VideoSection = () => {
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onEnded={handleEnded}
-          style={{ width: "100%", height: "auto", display: "block", maxHeight: "100vh", objectFit: "contain", background: "#000" }}
+          style={{ width: "100%", height: "auto", display: "block", maxHeight: "55vh", objectFit: "contain", background: "#000" }}
         />
 
         {/* Big play button overlay */}
