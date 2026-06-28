@@ -83,23 +83,28 @@ export default function AdminModal({ open, onClose }) {
     toast.success("PIN changed successfully!");
   }
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+
   const modal = (
     <div
       style={{
         position: "fixed", inset: 0, zIndex: 9999,
         background: "rgba(0,0,0,0.55)", display: "flex",
-        alignItems: "center", justifyContent: "center",
-        padding: "16px", backdropFilter: "blur(4px)"
+        alignItems: authed ? "flex-start" : "center", justifyContent: "center",
+        padding: authed ? "0" : "16px", backdropFilter: "blur(4px)",
+        overflowY: authed ? "auto" : "hidden",
       }}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
         style={{
-          background: "#f0f5ff", borderRadius: "20px",
+          background: "#f0f5ff",
+          borderRadius: authed ? "0" : "20px",
           width: "100%", maxWidth: authed ? "860px" : "380px",
-          maxHeight: "90vh", overflowY: "auto",
+          minHeight: authed ? "100dvh" : "auto",
           boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
-          position: "relative"
+          position: "relative",
+          margin: authed ? "0 auto" : undefined,
         }}
       >
         {/* Close button */}
@@ -164,33 +169,32 @@ export default function AdminModal({ open, onClose }) {
             {/* Header */}
             <div style={{
               background: `linear-gradient(135deg, ${BLUE}, ${NAVY})`,
-              padding: "24px 28px", display: "flex", alignItems: "center",
-              justifyContent: "space-between", flexWrap: "wrap", gap: "12px",
-              borderRadius: "20px 20px 0 0"
+              padding: "20px 20px 16px", display: "flex", alignItems: "center",
+              justifyContent: "space-between", flexWrap: "wrap", gap: "10px",
             }}>
               <div>
-                <h1 style={{ color: "#fff", fontWeight: "800", fontSize: "20px", margin: 0 }}>⚙️ Admin Settings</h1>
-                <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "13px", margin: "4px 0 0" }}>TrueCare Cleaning Services</p>
+                <h1 style={{ color: "#fff", fontWeight: "800", fontSize: "18px", margin: 0 }}>⚙️ Admin Settings</h1>
+                <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "12px", margin: "3px 0 0" }}>TrueCare Cleaning Services</p>
               </div>
-              <div style={{ display: "flex", gap: "10px", paddingRight: "36px" }}>
+              <div style={{ display: "flex", gap: "8px", paddingRight: "40px", flexWrap: "wrap" }}>
                 <button
                   onClick={handleReset}
-                  style={{ padding: "9px 18px", borderRadius: "10px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff", fontSize: "13px", fontWeight: "600", cursor: "pointer" }}
+                  style={{ padding: "8px 14px", borderRadius: "10px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff", fontSize: "12px", fontWeight: "600", cursor: "pointer" }}
                 >
-                  Reset Defaults
+                  Reset
                 </button>
                 <button
                   onClick={handleSave}
-                  style={{ padding: "9px 22px", borderRadius: "10px", background: "#fff", border: "none", color: BLUE, fontSize: "13px", fontWeight: "700", cursor: "pointer" }}
+                  style={{ padding: "8px 16px", borderRadius: "10px", background: "#fff", border: "none", color: BLUE, fontSize: "12px", fontWeight: "700", cursor: "pointer" }}
                 >
-                  💾 Save Changes
+                  💾 Save
                 </button>
               </div>
             </div>
 
-            <div style={{ padding: "24px 20px" }}>
+            <div style={{ padding: "16px 14px" }}>
               {/* Tabs */}
-              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "20px" }}>
+              <div style={{ display: "flex", gap: "8px", overflowX: "auto", marginBottom: "16px", paddingBottom: "4px", WebkitOverflowScrolling: "touch" }}>
                 {[
                   { id: "popup", label: "🎁 Discount Popup" },
                   { id: "services", label: "🧹 Services" },
@@ -207,7 +211,7 @@ export default function AdminModal({ open, onClose }) {
                       border: activeTab === t.id ? `2px solid ${BLUE}` : "2px solid #e5e7eb",
                       background: activeTab === t.id ? BLUE : "#fff",
                       color: activeTab === t.id ? "#fff" : "#444",
-                      fontWeight: "600", fontSize: "13px", cursor: "pointer", transition: "all 0.15s"
+                      fontWeight: "600", fontSize: "12px", cursor: "pointer", transition: "all 0.15s", whiteSpace: "nowrap", flexShrink: 0
                     }}
                   >
                     {t.label}

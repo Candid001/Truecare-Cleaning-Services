@@ -39,9 +39,9 @@ const Hero = () => {
 
       {/* Buttons */}
       <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:w-4/5 lg:w-1/2 mx-auto px-10 md:px-0">
-        <a href="tel:+16393850823" className="w-full">
+        <a href="tel:+13065526150" className="w-full">
           <Button
-            text="Call Us: +1-639-385-0823"
+            text="Call Us: +1-306-552-6150"
             variant={`default`}
             cta={true}
           />
