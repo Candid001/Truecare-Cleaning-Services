@@ -345,23 +345,6 @@ export default function PriceCalculator() {
                 >
                   Book This Clean →
                 </button>
-
-                <a
-                  href="https://truecarecleaningservices.setmore.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "block",
-                    textAlign: "center",
-                    marginTop: "10px",
-                    color: "#1A6BFF",
-                    fontSize: "13px",
-                    fontWeight: "600",
-                    textDecoration: "none",
-                  }}
-                >
-                  📅 Or book instantly on Setmore
-                </a>
               </div>
             </div>
           </div>

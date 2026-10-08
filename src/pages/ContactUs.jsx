@@ -29,13 +29,13 @@ const ContactUs = () => {
             <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
               <PhoneCall /> Phone:
             </h2>
-            <p className="text-lgto w-[90%] mx-au">+1-234-567-890</p>
+            <p className="text-lgto w-[90%] mx-au">+1-306-552-6150</p>
           </div>
           <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
             <h2 className="font-medium text-2xl text-blue-500 flex gap-2">
               <Mail /> Email:
             </h2>
-            <p className="text-lgto w-[90%] mx-au">info@truecarecleaning.ca</p>
+            <p className="text-lgto w-[90%] mx-au">info@truecarecleaningservices.ca</p>
           </div>
           <div className="flex flex-col gap-2 mx-auto border-b-2 py-6 items-center text-center">
             <h2 className="font-medium text-2xl text-blue-500 flex gap-2">

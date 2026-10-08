@@ -219,9 +219,7 @@ const VideoSection = () => {
             ))}
           </div>
           <a
-            href="https://truecarecleaningservices.setmore.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/request-a-quote"
             style={{
               display: "inline-block",
               background: "linear-gradient(135deg, #1A6BFF, #0052cc)",

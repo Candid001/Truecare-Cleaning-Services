@@ -86,7 +86,7 @@ const suggestedQuestions = [
   "How do I book a cleaning?",
 ];
 
-const SETMORE_URL = "https://truecarecleaningservices.setmore.com";
+const BOOK_URL = "/request-a-quote";
 
 export default function TrueCareChat() {
   const [open, setOpen] = useState(false);
@@ -519,9 +519,7 @@ export default function TrueCareChat() {
                   ))}
                   {/* Book Now chip */}
                   <a
-                    href={SETMORE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={BOOK_URL}
                     style={{
                       fontSize: "11px",
                       padding: "5px 10px",
@@ -544,9 +542,7 @@ export default function TrueCareChat() {
               {messages.length > 1 && (
                 <div style={{ padding: "6px 12px", borderTop: "1px solid #f0f0f0", background: "#fff", flexShrink: 0 }}>
                   <a
-                    href={SETMORE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={BOOK_URL}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -562,7 +558,7 @@ export default function TrueCareChat() {
                       textDecoration: "none",
                     }}
                   >
-                    📅 Book a Cleaning on Setmore
+                    📅 Book a Cleaning Now
                   </a>
                 </div>
               )}

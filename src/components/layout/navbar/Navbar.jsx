@@ -117,7 +117,7 @@ function Navbar() {
                 {/* Button & Mobile nav trigger */}
                 <div className="flex items-center gap-2 text-btn-primary">
                     <div className={`hidden md:flex items-center gap-2`}>
-                        <a href="https://truecarecleaningservices.setmore.com" target="_blank" rel="noopener noreferrer">
+                        <a href="/request-a-quote">
                             <Button
                                 text="Book Now"
                                 variant={`primary`}
