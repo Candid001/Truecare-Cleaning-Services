@@ -40,7 +40,7 @@ const CallToAction = () => {
                   className="bg-deep-blue text-white text-[12px] sm:text-[15px] px-4 py-3 rounded-[60px] font-medium"
                 />
               </a>
-              <a href="https://truecarecleaningservices.setmore.com" target="_blank" rel="noopener noreferrer">
+              <a href="/request-a-quote">
                 <Button
                   text="Book Now"
                   className="bg-white text-blue-sec text-sm px-4 py-3 rounded-[60px] font-medium"

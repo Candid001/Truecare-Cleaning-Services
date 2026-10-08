@@ -163,79 +163,57 @@ function MultiStepQuoteForm() {
         setCurrentStep((prev) => prev - 1);
     };
 
+    const fileToBase64 = (file) =>
+        new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result).split(",")[1] || "");
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+        });
+
     const handleSubmit = async () => {
         setIsSubmitting(true);
 
         try {
-            // Format the message for Telegram
-            const message = `
-🧹 *New Cleaning Quote Request*
-
-*Contact Information*
-Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-City: ${formData.city}
-Province: ${formData.province}
-
- *Service Details*
-Property Type: ${formData.propertyType}
-Service Type: ${formData.serviceType}
-Space Size: ${formData.spaceSize}
-Rooms: ${formData.rooms}
-Bathrooms: ${formData.bathrooms}
-Frequency: ${formData.cleaningFrequency}
-Cleanliness Level: ${formData.cleanlinessLevel}
-Client Provides Supplies: ${formData.provideSupplies}
-Has Pets: ${formData.hasPets}
-
-📅 *Schedule*
-Preferred Date: ${formData.preferredDate}
-${formData.alternateDate ? `Alternate Date: ${formData.alternateDate}` : ""}
-Preferred Time: ${formData.preferredTime}
-
-${formData.additionalNotes ? `📝 *Additional Notes*\n${formData.additionalNotes}` : ""}
-      `.trim();
-
-            // Replace with your Telegram Bot Token and Chat ID
-            const TELEGRAM_BOT_TOKEN = "8434089958:AAGe-fpQRmBHJCxyEhLNX4Ha3pUPVjT_gdQ";
-            const TELEGRAM_CHAT_ID = "5923800619";
-
-            const response = await fetch(
-                `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: TELEGRAM_CHAT_ID,
-                        text: message,
-                        parse_mode: "Markdown",
-                    }),
-                }
+            const photos = await Promise.all(
+                (formData.photos || []).map(async (file) => ({
+                    filename: file.name,
+                    contentBase64: await fileToBase64(file),
+                }))
             );
 
-            if (!response.ok) {
-                throw new Error("Failed to send message");
-            }
+            const response = await fetch("/api/quote-request", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    formData: {
+                        firstName: formData.firstName,
+                        lastName: formData.lastName,
+                        email: formData.email,
+                        phone: formData.phone,
+                        city: formData.city,
+                        province: formData.province,
+                        propertyType: formData.propertyType,
+                        serviceType: formData.serviceType,
+                        spaceSize: formData.spaceSize,
+                        rooms: formData.rooms,
+                        bathrooms: formData.bathrooms,
+                        cleaningFrequency: formData.cleaningFrequency,
+                        cleanlinessLevel: formData.cleanlinessLevel,
+                        provideSupplies: formData.provideSupplies,
+                        hasPets: formData.hasPets,
+                        preferredDate: formData.preferredDate,
+                        alternateDate: formData.alternateDate,
+                        preferredTime: formData.preferredTime,
+                        additionalNotes: formData.additionalNotes,
+                    },
+                    photos,
+                }),
+            });
 
-            // Handle photo uploads if any
-            if (formData.photos.length > 0) {
-                for (const photo of formData.photos) {
-                    const photoFormData = new FormData();
-                    photoFormData.append("chat_id", TELEGRAM_CHAT_ID);
-                    photoFormData.append("photo", photo);
-                    photoFormData.append("caption", "Quote request photo");
-
-                    await fetch(
-                        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`,
-                        {
-                            method: "POST",
-                            body: photoFormData,
-                        }
-                    );
-                }
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.success) {
+                throw new Error(result.error || "Failed to submit quote request");
             }
 
             setIsSubmitting(false)
