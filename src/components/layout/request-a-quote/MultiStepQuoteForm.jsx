@@ -1,10 +1,10 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 import ContactDetailsStep from "./steps/ContactDetailsStep";
 import ServiceDetailsStep from "./steps/ServiceDetailsStep";
 import SchedulingExtrasStep from "./steps/SchedulingExtrasStep";
 import ReviewSubmitStep from "./steps/ReviewSubmitStep";
-import SuccessModal from "./SuccessModal";
 import StepIndicator from "@/components/layout/request-a-quote/StepIndicator.jsx";
 import Caution from "@assets/caution.svg?component"
 import Button from "@/components/Button.jsx";
@@ -18,8 +18,8 @@ const STEPS = {
 };
 
 function MultiStepQuoteForm() {
+    const navigate = useNavigate();
     const [currentStep, setCurrentStep] = useState(STEPS.CONTACT);
-    const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
@@ -217,36 +217,35 @@ function MultiStepQuoteForm() {
             }
 
             setIsSubmitting(false)
-            setShowSuccessModal(true);
             toast.success("Quote request submitted successfully!");
 
-            // Reset form after successful submission
-            setTimeout(() => {
-                setFormData({
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                    phone: "",
-                    city: "",
-                    province: "",
-                    propertyType: "",
-                    serviceType: "",
-                    spaceSize: "",
-                    rooms: "",
-                    bathrooms: "",
-                    cleaningFrequency: "",
-                    cleanlinessLevel: "",
-                    provideSupplies: "",
-                    hasPets: "",
-                    preferredDate: "",
-                    alternateDate: "",
-                    preferredTime: "",
-                    additionalNotes: "",
-                    photos: [],
-                });
-                setCurrentStep(STEPS.CONTACT);
-            }, 3000);
+            // Reset form state, then send the user to the dedicated Thank You page
+            // (keep this URL stable: /thank-you — conversion tracking depends on it)
+            setFormData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                city: "",
+                province: "",
+                propertyType: "",
+                serviceType: "",
+                spaceSize: "",
+                rooms: "",
+                bathrooms: "",
+                cleaningFrequency: "",
+                cleanlinessLevel: "",
+                provideSupplies: "",
+                hasPets: "",
+                preferredDate: "",
+                alternateDate: "",
+                preferredTime: "",
+                additionalNotes: "",
+                photos: [],
+            });
+            setCurrentStep(STEPS.CONTACT);
             window.scrollTo(0, 0);
+            navigate("/thank-you");
         } catch (error) {
             console.error("Error submitting form:", error);
             toast.error("Failed to submit quote request. Please try again.");
@@ -345,11 +344,6 @@ function MultiStepQuoteForm() {
                     )}
                 </div>
             </div>
-
-            <SuccessModal
-                isOpen={showSuccessModal}
-                onClose={() => setShowSuccessModal(false)}
-            />
         </div>
     );
 }

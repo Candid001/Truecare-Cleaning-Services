@@ -8,6 +8,7 @@ import RequestAQuoteForm from "@components/layout/request-a-quote/RequestAQuoteF
 function RequestAQuote (){
     return (
         <>
+            <RequestAQuoteForm />
             <ServicesHero
                 nav={'Request A Quote'}
                 heading={'Quick, Simple, and Transparent'}
@@ -16,7 +17,6 @@ function RequestAQuote (){
                 maxWH={'lg:max-w-1/2 md:max-w-3/5'}
                 maxWD={'lg:max-w-[55%] md:max-w-[70%]'}
             />
-            <RequestAQuoteForm />
             <ServiceCTA
                 {...serviceCta.homeAndApartments}
                 email={

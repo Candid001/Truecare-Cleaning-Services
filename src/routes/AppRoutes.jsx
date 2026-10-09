@@ -14,6 +14,7 @@ import PMAndRealtors from "@/pages/PMAndRealtors.jsx";
 import ClinicsAndWellnessCenter from "@/pages/ClinicsAndWellnessCenter.jsx";
 import ConstructionCleaning from "@/pages/ConstructionCleaning.jsx";
 import RequestAQuote from "@/pages/RequestAQuote.jsx";
+import ThankYou from "@/pages/ThankYou.jsx";
 
 function AppRoutes() {
   return (
@@ -30,6 +31,7 @@ function AppRoutes() {
             <Route path="clinics-and-wellness-centers-cleaning" element={<ClinicsAndWellnessCenter />} />
             <Route path="post-construction-cleaning" element={<ConstructionCleaning />} />
             <Route path="request-a-quote" element={<RequestAQuote />} />
+            <Route path="thank-you" element={<ThankYou />} />
             <Route path="contact-us" element={<ContactUs />} />
           </Routes>
         </div>

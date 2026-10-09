@@ -7,7 +7,7 @@ import MultiStepQuoteForm from "@/components/layout/request-a-quote/MultiStepQuo
 
 function RequestAQuoteForm(){
     return (
-        <div className={`py-10 md:py-20 px-3 md:px-0 space-y-20`}>
+        <div className={`pt-6 pb-10 md:pt-10 md:pb-20 px-3 md:px-0 space-y-20`}>
             {/*Form*/}
             <MultiStepQuoteForm />
 
