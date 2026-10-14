@@ -3,9 +3,7 @@
 // Required env var on Vercel: RESEND_API_KEY (Settings -> Environment Variables).
 
 const QUOTE_RECIPIENT = "tomi@truecarecleaningservices.ca";
-const FROM_ADDRESS = "TrueCare Website <onboarding@resend.dev>";
-// Once your domain is verified on Resend, switch FROM_ADDRESS to e.g.
-// "TrueCare Website <quotes@truecarecleaningservices.ca>" for better deliverability.
+const FROM_ADDRESS = "TrueCare Website <quotes@truecarecleaningservices.ca>";
 
 function escapeHtml(value) {
   return String(value ?? "")
