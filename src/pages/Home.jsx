@@ -14,6 +14,7 @@ import Compare from "../components/layout/landing-page/Compare";
 import Guarantee from "../components/layout/landing-page/Guarantee";
 import ReviewHighlights from "../components/layout/landing-page/ReviewHighlights";
 import Faq from "../components/layout/landing-page/Faq";
+import GreenClean from "../components/layout/landing-page/GreenClean";
 import AreasWeServe from "../components/layout/landing-page/AreasWeServe";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       <HowItWorks />
       <WhyChooseUs />
       <Guarantee />
+      <GreenClean />
       <VideoSection />
       <WhoWeAre />
       <ReviewHighlights />

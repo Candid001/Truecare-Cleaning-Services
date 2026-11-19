@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Phone, ShieldCheck, Leaf, CheckCircle2 } from "lucide-react";
 import HeroBg from "@assets/hero-bg.svg";
@@ -9,6 +10,9 @@ const pills = [
 ];
 
 function ServicesHero({ nav, heading, desc, maxWH, maxWD, image }) {
+    useEffect(() => {
+        if (nav) document.title = `${nav} in Regina, SK | TrueCare Cleaning Services`;
+    }, [nav]);
     return (
         <div className="relative overflow-hidden text-white bg-gradient-to-br from-blue-tertiary via-deep-blue to-btn-primary">
             <div
