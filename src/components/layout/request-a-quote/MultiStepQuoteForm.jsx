@@ -17,7 +17,7 @@ const STEPS = {
     REVIEW: 4,
 };
 
-function MultiStepQuoteForm() {
+function MultiStepQuoteForm({ split = false }) {
     const navigate = useNavigate();
     const [currentStep, setCurrentStep] = useState(STEPS.CONTACT);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -294,8 +294,8 @@ function MultiStepQuoteForm() {
 
     return (
         <div className="space-y-5 md:space-y-10">
-            <div className={`w-fit mx-auto space-y-5`}>
-                <h2 className={cn("md:text-[40px] text-2xl leading-[120%]", currentStep !== 4 && "md:w-3/5 mx-auto", "text-center font-medium")}>
+            <div className={split ? "w-full space-y-5" : "w-fit mx-auto space-y-5"}>
+                <h2 className={cn(split ? "md:text-3xl" : "md:text-[40px]", "text-2xl leading-[120%]", currentStep !== 4 && !split && "md:w-3/5 mx-auto", split ? "text-left font-semibold" : "text-center font-medium")}>
                     {currentStep === 4 ? "Review Your Details": "Tell Us About Your Cleaning Need"}
                 </h2>
 
@@ -307,7 +307,7 @@ function MultiStepQuoteForm() {
                 }
             </div>
 
-            <div className={cn(currentStep < STEPS.REVIEW && "bg-blue-tert"," rounded-lg md:w-4/5 xl:w-[55%] mx-auto p-3 lg:p-5 space-y-10")}>
+            <div className={cn(currentStep < STEPS.REVIEW && "bg-blue-tert"," rounded-lg mx-auto p-3 lg:p-5 space-y-10", split ? "w-full" : "md:w-4/5 xl:w-[55%]")}>
                 <div className="space-y-5">
                     {/* Step Indicator */}
                     {currentStep < STEPS.REVIEW &&  <StepIndicator currentStep={currentStep} />}

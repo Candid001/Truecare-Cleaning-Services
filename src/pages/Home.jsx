@@ -13,6 +13,7 @@ import StatsStrip from "../components/layout/landing-page/StatsStrip";
 import Compare from "../components/layout/landing-page/Compare";
 import Guarantee from "../components/layout/landing-page/Guarantee";
 import ReviewHighlights from "../components/layout/landing-page/ReviewHighlights";
+import Faq from "../components/layout/landing-page/Faq";
 import AreasWeServe from "../components/layout/landing-page/AreasWeServe";
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
       <WhoWeAre />
       <ReviewHighlights />
       <AreasWeServe />
+      <Faq />
       <CallToAction />
     </>
   );
