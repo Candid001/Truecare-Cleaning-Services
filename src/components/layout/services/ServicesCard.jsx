@@ -1,21 +1,15 @@
-import {Link} from "react-router-dom"
-import {ChevronRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-function ServicesCard({heading, desc, link}) {
-    return(
-        <div className={`col-span-1 bg-white rounded-xl p-10 relative`}>
-            <div className={`space-y-3 pb-16`}>
-                <h4 className={`text-2xl font-medium`}>{heading}</h4>
-                <p>{desc}</p>
-            </div>
-
-            <div className={`flex gap-2 items-center absolute bottom-7 left-10`}>
-                <a href={link} className={`text-btn-primary font-medium`}>Learn More</a>
-                {/*<Link to={link} className={`text-btn-primary font-medium`}>Learn More</Link>*/}
-                <ChevronRight className={`h-4 w-4`}/>
-            </div>
-        </div>
-    )
+function ServicesCard({ heading, desc, link }) {
+    return (
+        <a href={link} className="group col-span-1 bg-white rounded-xl p-8 md:p-10 flex flex-col gap-4 border-2 border-transparent hover:border-btn-sec transition shadow-sm">
+            <h4 className="text-2xl font-semibold text-blue-tertiary">{heading}</h4>
+            <p className="text-grey-pri flex-1">{desc}</p>
+            <span className="inline-flex items-center gap-2 text-btn-primary font-semibold">
+                Learn More <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+            </span>
+        </a>
+    );
 }
 
 export default ServicesCard;

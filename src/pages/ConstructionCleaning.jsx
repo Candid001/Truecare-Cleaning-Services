@@ -14,6 +14,7 @@ function ConstructionCleaning() {
   return (
     <>
       <ServicesHero
+              image={servicesImages.clinicsAndWellnessCenter[0]}
         nav={"Post-Construction Cleaning"}
         heading={"Turn Construction Mess Into Move-In Ready Spaces"}
         desc={`From dust to debris, we take care of the heavy lifting leaving your newly built or renovated property clean, polished, and ready for move-in or final presentation.`}

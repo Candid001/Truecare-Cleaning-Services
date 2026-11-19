@@ -14,6 +14,7 @@ function PMAndRealtors() {
   return (
     <>
       <ServicesHero
+              image={servicesImages.officeAndSMB[0]}
         nav={"Property Managers & Realtors Cleaning"}
         heading={"Keep Every Property Show-Ready and Spotless"}
         desc={`Fast, reliable cleaning for rentals and listings. We help property managers and realtors keep every space fresh, spotless, and ready to impress whether it’s for new tenants or potential buyers.`}

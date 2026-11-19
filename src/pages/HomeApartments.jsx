@@ -9,6 +9,7 @@ const HomeApartments = () => {
   return (
       <>
           <ServicesHero
+              image={servicesImages.homeAndApartments[0]}
               nav={'Home & Apartment Cleaning'}
               heading={'Make Your Home Shine Effortlessly'}
               desc={'Enjoy a clean, fresh home without the stress. We provide reliable home and apartment cleaning designed to make your space feel comfortable, tidy, and well cared for.'}

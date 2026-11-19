@@ -9,6 +9,7 @@ function OfficeAndSMB() {
     return(
         <>
             <ServicesHero
+              image={servicesImages.officeAndSMB[0]}
                 nav={'Office & Small Business Cleaning'}
                 heading={'Keep Your Workplace Clean and Productive'}
                 desc={'Give your team a fresh, organized workspace every day. We provide reliable cleaning that fits your business hours, because a clean office supports better focus, better impressions, and a better workday.'}

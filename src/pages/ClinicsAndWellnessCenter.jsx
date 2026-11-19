@@ -14,6 +14,7 @@ function ClinicsAndWellnessCenter() {
   return (
     <>
       <ServicesHero
+              image={servicesImages.clinicsAndWellnessCenter[0]}
         nav={"Clinic & Wellness Center Cleaning"}
         heading={"Create a Safe, Spotless Care Environment"}
         desc={`We provide professional cleaning for clinics, spas, and wellness centers keeping every surface sanitized and every space welcoming for your clients and staff.`}
