@@ -1,9 +1,13 @@
 import CTABg from "@assets/cta-bg.svg"
 import {Link} from "react-router-dom";
 import Button from "@/components/Button.jsx";
+import Compare from "@components/layout/landing-page/Compare.jsx";
+import Guarantee from "@components/layout/landing-page/Guarantee.jsx";
 
-function ServiceCTA({cta, heading, desc, email}) {
+function ServiceCTA({cta, heading, desc, email, showTrust = false}) {
     return(
+        <>
+        {showTrust && (<><Compare /><Guarantee /></>)}
         <div className={`py-10 md:py-20 md:w-[90%] lg:w-4/5 mx-auto px-5 md:px-0`}>
             <div
                 className={`w-full rounded-lg py-10 relative overflow-hidden`}
@@ -38,6 +42,7 @@ function ServiceCTA({cta, heading, desc, email}) {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

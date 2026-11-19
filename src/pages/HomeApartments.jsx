@@ -22,7 +22,7 @@ const HomeApartments = () => {
               why={serviceWhyChooseUS.homeAndApartments}
           />
           <OtherCleaningServices/>
-          <ServiceCTA {...serviceCta.homeAndApartments}/>
+          <ServiceCTA {...serviceCta.homeAndApartments} showTrust />
       </>
   )
 }

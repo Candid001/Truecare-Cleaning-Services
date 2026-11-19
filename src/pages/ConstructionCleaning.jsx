@@ -27,7 +27,7 @@ function ConstructionCleaning() {
         why={serviceWhyChooseUS.constructionCleaning}
       />
       <OtherCleaningServices />
-      <ServiceCTA {...serviceCta.constructionCleaning} />
+      <ServiceCTA {...serviceCta.constructionCleaning} showTrust />
     </>
   );
 }

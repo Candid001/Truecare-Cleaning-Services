@@ -27,7 +27,7 @@ function ClinicsAndWellnessCenter() {
         why={serviceWhyChooseUS.clinicsAndWellnessCenter}
       />
       <OtherCleaningServices />
-      <ServiceCTA {...serviceCta.clinicsAndWellnessCenter} />
+      <ServiceCTA {...serviceCta.clinicsAndWellnessCenter} showTrust />
     </>
   );
 }

@@ -27,7 +27,7 @@ function PMAndRealtors() {
         why={serviceWhyChooseUS.propertyRealtors}
       />
       <OtherCleaningServices />
-      <ServiceCTA {...serviceCta.propertyRealtors} />
+      <ServiceCTA {...serviceCta.propertyRealtors} showTrust />
     </>
   );
 }

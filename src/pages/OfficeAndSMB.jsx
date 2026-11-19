@@ -22,7 +22,7 @@ function OfficeAndSMB() {
                 why={serviceWhyChooseUS.officeAndSMB}
             />
             <OtherCleaningServices/>
-            <ServiceCTA {...serviceCta.homeAndApartments}/>
+            <ServiceCTA {...serviceCta.homeAndApartments} showTrust />
         </>
 
     )

@@ -7,6 +7,7 @@ import {Menu, X} from "lucide-react";
 import NavbarLink from "./NavbarLink.jsx";
 import NavDropdown from "@/components/layout/navbar/NavDropdown.jsx";
 import {navItems} from "@/lib/utils.jsx";
+import TopBar from "@/components/layout/TopBar.jsx";
 import AdminModal from "@/components/AdminModal.jsx";
 
 function Navbar() {
@@ -63,8 +64,9 @@ function Navbar() {
 
 
     return (
-        <nav className="fixed top-0 left-0 max-w-full mx-auto right-0 z-50 bg-white py-4 shadow-xs border-b border-blue-100">
-            <div className="flex justify-between items-center w-[90%] mx-auto">
+        <nav className="fixed top-0 left-0 max-w-full mx-auto right-0 z-50 bg-white shadow-xs border-b border-blue-100">
+            <TopBar />
+            <div className="flex justify-between items-center w-[90%] mx-auto py-3">
                 <Link to="/" onClick={handleLogoClick} style={{ userSelect: "none" }}>
                     <Logo/>
                 </Link>
@@ -93,7 +95,7 @@ function Navbar() {
                 {/* Mobile Screen List */}
                 {isOpen && (
                     <div
-                        className="absolute top-18 left-0 w-full bg-white flex flex-col px-6 py-10 space-y-3 z-50 rounded-b-4xl"
+                        className="absolute top-full left-0 w-full bg-white flex flex-col px-6 py-10 space-y-3 z-50 rounded-b-4xl"
                     >
                         {navItems.slice(0,2).map((item, index) => (
                             <NavbarLink key={index} name={item.name} to={item.to} isMobile={true} onClick={handleIsOpen}/>

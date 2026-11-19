@@ -21,7 +21,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Navbar />
       <div className="max-w-full mx-auto shadow-md">
-        <div className="mt-18">
+        <div className="mt-[101px] md:mt-[105px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="about" element={<AboutUs />} />

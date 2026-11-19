@@ -9,19 +9,27 @@ import WhatClientsSay from "../components/layout/landing-page/WhatClientsSay";
 import WhereWeServe from "../components/layout/landing-page/WhereWeServe";
 import PriceCalculator from "../components/layout/landing-page/PriceCalculator";
 import CallToAction from "../components/layout/landing-page/CallToAction";
+import StatsStrip from "../components/layout/landing-page/StatsStrip";
+import Compare from "../components/layout/landing-page/Compare";
+import Guarantee from "../components/layout/landing-page/Guarantee";
+import ReviewHighlights from "../components/layout/landing-page/ReviewHighlights";
+import AreasWeServe from "../components/layout/landing-page/AreasWeServe";
 
 const Home = () => {
   return (
     <>
-      <VideoSection />
       <Hero />
-      <WhoWeAre />
+      <StatsStrip />
       <WhatWeOffer />
+      <Compare />
       <PriceCalculator />
       <HowItWorks />
       <WhyChooseUs />
-      <WhatClientsSay />
-      <WhereWeServe />
+      <Guarantee />
+      <VideoSection />
+      <WhoWeAre />
+      <ReviewHighlights />
+      <AreasWeServe />
       <CallToAction />
     </>
   );
